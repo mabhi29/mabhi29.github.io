@@ -163,4 +163,75 @@ document.addEventListener('DOMContentLoaded', () => {
             heroImageWrapper.style.transform = `rotateY(${axisX}deg) rotateX(${axisY}deg)`;
         });
     }
+
+    // ==========================================================================
+    // ABHISHEK MULE INTERACTIVE CASE STUDY MODAL MANAGEMENT ENGINE
+    // ==========================================================================
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalCloseBtn = document.getElementById('modalClose');
+    const triggerButtons = document.querySelectorAll('[data-modal-open]');
+
+    // Function to activate target view context
+    const openModalWindow = (targetId) => {
+        if (modalOverlay) {
+            modalOverlay.classList.add('modal-active');
+            document.body.style.overflow = 'hidden'; // Halt main structural scroll loops
+        }
+    };
+
+    // Function to safely tear down operational frame
+    const closeModalWindow = () => {
+        if (modalOverlay) {
+            modalOverlay.classList.remove('modal-active');
+            document.body.style.overflow = ''; // Restore structural scroll properties
+        }
+    };
+
+    // Binding operations to registered DOM targets
+    triggerButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const TargetModal = btn.getAttribute('data-modal-open');
+            openModalWindow(TargetModal);
+        });
+    });
+
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModalWindow);
+    }
+
+    // Safety fallback execution: Close if developer clicks the abstract space outside
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                closeModalWindow();
+            }
+        });
+        
+        // Connect system Escape key loops
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('modal-active')) {
+                closeModalWindow();
+            }
+        });
+    }
+
+    // Global Interactive Image Gallery Switcher Sub-system
+    window.updateTsalGallery = function(selectedSrc, thumbnailElement) {
+        const mainDisplay = document.getElementById('tsalMainDisplay');
+        if (!mainDisplay) return;
+
+        // Apply quick slick opacity shift
+        mainDisplay.style.opacity = '0.3';
+        
+        setTimeout(() => {
+            mainDisplay.src = selectedSrc;
+            mainDisplay.style.opacity = '1';
+        }, 150);
+
+        // Standardize class arrays across siblings
+        const allThumbs = document.querySelectorAll('.thumb-img');
+        allThumbs.forEach(thumb => thumb.classList.remove('active-thumb'));
+        thumbnailElement.classList.add('active-thumb');
+    };
+    
 });

@@ -180,3 +180,30 @@
         text-align: center;
     }
 }
+
+/* Modal Interface Response Conversions */
+@media (max-width: 992px) {
+    .modal-body-grid {
+        grid-template-columns: 1fr;
+    }
+    .modal-gallery-side {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 30px 24px;
+    }
+    .gallery-main-view {
+        height: 280px;
+    }
+    .modal-info-side {
+        padding: 36px 24px;
+    }
+}
+@media (max-width: 576px) {
+    .modal-case-title {
+        font-size: 1.75rem;
+    }
+    .metric-highlights-box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

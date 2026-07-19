@@ -880,3 +880,241 @@ body {
     box-shadow: var(--shadow-hover);
     border-color: rgba(45, 106, 79, 0.12);
 }
+
+/* ==========================================================================
+   11. PREMIUM FULL-SCALE MODAL CASE ARCHITECTURE
+   ========================================================================== */
+.project-real-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+.project-card:hover .project-real-img {
+    transform: scale(1.05);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 20px;
+}
+.modal-overlay.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-window {
+    background-color: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 1100px;
+    max-height: 85vh;
+    box-shadow: 0 50px 100px -20px rgba(15, 23, 42, 0.15);
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(30px) scale(0.98);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal-overlay.modal-active .modal-window {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-subtle);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+    z-index: 10;
+    transition: var(--transition-smooth);
+}
+.modal-close-btn:hover {
+    background-color: var(--secondary-green);
+    color: var(--accent-green);
+    transform: rotate(90deg);
+}
+
+.modal-body-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    min-height: 100%;
+}
+
+/* Gallery Engine Layout */
+.modal-gallery-side {
+    background-color: var(--bg-primary);
+    padding: 40px;
+    border-right: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+}
+.gallery-main-view {
+    width: 100%;
+    height: 380px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: var(--shadow-premium);
+    border: 1px solid var(--border-subtle);
+}
+.gallery-main-view img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+}
+.gallery-thumbnails {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+.thumb-img {
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: #FFFFFF;
+    transition: var(--transition-smooth);
+}
+.thumb-img:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-green);
+}
+.thumb-img.active-thumb {
+    border-color: var(--accent-green);
+    box-shadow: 0 4px 12px rgba(45, 106, 79, 0.15);
+}
+
+/* Info Architecture Layout */
+.modal-info-side {
+    padding: 50px 40px;
+    overflow-y: auto;
+}
+.modal-meta-tag {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-green);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.modal-case-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.2;
+    margin-top: 8px;
+}
+.modal-heading-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--accent-green);
+    margin: 20px 0;
+    border-radius: 2px;
+}
+.modal-section-heading {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 28px 0 12px 0;
+    color: var(--text-main);
+}
+.modal-paragraph-text {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+/* Customized Status Markers */
+.modal-specification-list {
+    list-style: none;
+    padding-left: 0;
+}
+.modal-specification-list li {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.5;
+}
+.indicator-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+.red-glow { background-color: #ef4444; box-shadow: 0 0 8px #ef4444; }
+.green-glow { background-color: #22c55e; box-shadow: 0 0 8px #22c55e; }
+.fault-glow { background-color: #6b7280; }
+
+/* Metrics Panels Layout */
+.metric-highlights-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+    background-color: var(--bg-primary);
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+}
+.metric-stat-item {
+    text-align: center;
+}
+.metric-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent-green);
+}
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.modal-footer-cta {
+    margin-top: 40px;
+}
+.fluid-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px;
+}

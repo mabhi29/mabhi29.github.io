@@ -244,23 +244,26 @@
                     </article>
 
                     <!-- Project Card 4 -->
-                    <article class="project-card reveal-up interactive-card">
-                        <div class="project-img-wrapper">
-                            <div class="project-placeholder-img graphic-4">
-                                <i class="fa-solid fa-car-battery"></i>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-name">Formula Student Electronics</h3>
-                            <p class="project-desc">Custom robust engineering execution involving low voltage distribution arrays, multi-node telemetry wiring harness topologies, and signal integrity mapping.</p>
-                            <div class="project-badges">
-                                <span class="badge">Low Voltage Systems</span>
-                                <span class="badge">PCB Design</span>
-                                <span class="badge">Harness</span>
-                            </div>
-                            <button class="btn-view-details">View Details <i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-                    </article>
+<article class="project-card reveal-up interactive-card">
+    <div class="project-img-wrapper">
+        <!-- Premium Real Image Integration with Automatic Elegant Graphic Fallback -->
+        <img src="images/bspd/bspd1.jpeg" alt="Tractive System Active Light" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="project-placeholder-img graphic-4" style="display: none;">
+            <i class="fa-solid fa-bolt-lightning"></i>
+        </div>
+    </div>
+    <div class="project-info">
+        <h3 class="project-name">Tractive System Active Light (TSAL)</h3>
+        <p class="project-desc">An EV safety compliance architecture engineered to monitor high-voltage thresholds, featuring optimized op-amp circuits and single-wire fault isolation.</p>
+        <div class="project-badges">
+            <span class="badge">EV Safety Standards</span>
+            <span class="badge">Analog Circuit Design</span>
+            <span class="badge">PCB Development</span>
+            <span class="badge">555 Timer</span>
+        </div>
+        <button class="btn-view-details" data-modal-open="modal-tsal">View Details <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</article>
                 </div>
             </div>
         </section>
@@ -353,6 +356,72 @@
             </a>
         </div>
     </footer>
+
+    <!-- Premium Project Case Study Overlay System -->
+<div class="modal-overlay" id="modalOverlay">
+    <!-- TSAL Project Case Window -->
+    <div class="modal-window" id="modal-tsal">
+        <button class="modal-close-btn" id="modalClose">&times;</button>
+        <div class="modal-body-grid">
+            
+            <!-- Gallery Interface Side -->
+            <div class="modal-gallery-side">
+                <div class="gallery-main-view">
+                    <img src="images/bspd/bspd1.jpeg" alt="TSAL Main Structural Layout" id="tsalMainDisplay" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22100%25%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%232D6A4F%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-size=%2224%22>TSAL PCB Layout</text></svg>';">
+                </div>
+                <div class="gallery-thumbnails">
+                    <img src="images/bspd/bspd1.jpeg" alt="Thumbnail 1" class="thumb-img active-thumb" onclick="updateTsalGallery(this.src, this)">
+                    <img src="images/bspd/bspd2.jpeg" alt="Thumbnail 2" class="thumb-img" onclick="updateTsalGallery(this.src, this)" onerror="this.style.display='none';">
+                    <img src="images/bspd/bspd3.jpeg" alt="Thumbnail 3" class="thumb-img" onclick="updateTsalGallery(this.src, this)" onerror="this.style.display='none';">
+                    <img src="images/bspd/bspd4.jpeg" alt="Thumbnail 4" class="thumb-img" onclick="updateTsalGallery(this.src, this)" onerror="this.style.display='none';">
+                    <img src="images/bspd/bspd5.jpeg" alt="Thumbnail 5" class="thumb-img" onclick="updateTsalGallery(this.src, this)" onerror="this.style.display='none';">
+                </div>
+            </div>
+
+            <!-- Detailed Engineering Case Study Side -->
+            <div class="modal-info-side">
+                <span class="modal-meta-tag"><i class="fa-solid fa-car-battery"></i> EV Technology &amp; Safety Hardware</span>
+                <h2 class="modal-case-title">Tractive System Active Light (TSAL)</h2>
+                <div class="modal-heading-divider"></div>
+                
+                <h3 class="modal-section-heading">Project Overview</h3>
+                <p class="modal-paragraph-text">
+                    Designed and optimized an advanced Tractive System Active Light (TSAL) circuitry asset for an Electric Vehicle platform. This safety asset serves as a high-visibility indicator matrix, calculating and reporting real-time system power conditions in strict compliance with global EV engineering guidelines.
+                </p>
+
+                <h3 class="modal-section-heading">Core Compliance State Matrix</h3>
+                <ul class="modal-specification-list">
+                    <li><span class="indicator-dot red-glow"></span><strong>Red Blinking Status:</strong> Triggered instantly when system potential exceeds the critical safety cross-section limit of 60V.</li>
+                    <li><span class="indicator-dot green-glow"></span><strong>Solid Green Status:</strong> Displays continuous safe operation indication when monitored potential settles cleanly below 60V.</li>
+                    <li><span class="indicator-dot fault-glow"></span><strong>System Fault Safe-State:</strong> Executes complete visual blackout conditions across the array during single-wire circuit interruptions to protect status reliability.</li>
+                </ul>
+
+                <h3 class="modal-section-heading">Hardware Optimization Breakthroughs</h3>
+                <p class="modal-paragraph-text">
+                    Re-architected the baseline architecture by implementing a highly responsive operational amplifier and 555-timer layout embedded with local single-wire line fault monitoring. This architectural shift achieved substantial engineering gains:
+                </p>
+                
+                <div class="metric-highlights-box">
+                    <div class="metric-stat-item">
+                        <span class="metric-value">+15%</span>
+                        <span class="metric-label">Signal Propagation Speed</span>
+                    </div>
+                    <div class="metric-stat-item">
+                        <span class="metric-value">-25%</span>
+                        <span class="metric-label">PCB Physical Size Requirement</span>
+                    </div>
+                </div>
+
+                <div class="modal-footer-cta">
+                    <a href="https://www.linkedin.com/posts/amule29_embeddedsystems-evtechnology-pcbdesign-activity-7456168092021358592-4ZgP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbqeA0BgyDCYYB-FxN12ZqLI_Dw8xxLpiQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn ripple">
+                        View Engineering Record on LinkedIn <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 
     <!-- App Script Initialization Links -->
     <script src="js/typing.js"></script>
