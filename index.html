@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Theme Style Sheets -->
+    <!-- Theme Style Sheet -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -187,105 +187,107 @@
                 </div>
                 <div class="projects-grid">
                     
-                    <!-- Project Card 1: Real-time Environment Monitoring System -->
+                    <!-- Project Card 1: TSAL -->
                     <article class="project-card reveal-up interactive-card">
                         <div class="project-img-wrapper">
+                            <img src="images/projects/tsal/tsal1.jpg" alt="Tractive System Active Light" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="project-placeholder-img graphic-1">
-                                <i class="fa-solid fa-cloud-sun-rain"></i>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-name">Real-time Environment Monitoring System</h3>
-                            <p class="project-desc">A micro-architectural environment tracking system leveraging FreeRTOS multitasking to continuously monitor atmosphere parameters. Acquires climate vectors from integrated sensor arrays while broadcasting wireless data to a local web server simultaneously.</p>
-                            <div class="project-badges">
-                                <span class="badge">ESP32</span>
-                                <span class="badge">FreeRTOS</span>
-                                <span class="badge">Embedded C</span>
-                                <span class="badge">Wi-Fi</span>
-                                <span class="badge">Web Server</span>
-                            </div>
-                            <button class="btn-view-details" data-modal-open="modal-environment">View Details <i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 2: Tractive System Active Light -->
-                    <article class="project-card reveal-up interactive-card">
-                        <div class="project-img-wrapper">
-                            <div class="project-placeholder-img graphic-2">
                                 <i class="fa-solid fa-bolt-lightning"></i>
                             </div>
                         </div>
                         <div class="project-info">
                             <h3 class="project-name">Tractive System Active Light (TSAL)</h3>
-                            <p class="project-desc">A specialized high-voltage vehicle safety circuit engineered to indicate traction stack states matching EV structural standard rules. Built via analog operations with single wire fault configurations to drop footprint area and boost response delay loops.</p>
+                            <p class="project-desc">An EV safety compliance architecture engineered to monitor high-voltage thresholds, featuring optimized op-amp circuits and single-wire fault isolation.</p>
                             <div class="project-badges">
+                                <span class="badge">EV Safety Standards</span>
                                 <span class="badge">Analog Circuit Design</span>
                                 <span class="badge">PCB Development</span>
                                 <span class="badge">555 Timer</span>
-                                <span class="badge">EV Safety Standards</span>
                             </div>
                             <button class="btn-view-details" data-modal-open="modal-tsal">View Details <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </article>
 
-                    <!-- Project Card 3: Brake System Plausibility Device -->
+                    <!-- Project Card 2: BSPD -->
                     <article class="project-card reveal-up interactive-card">
                         <div class="project-img-wrapper">
-                            <div class="project-placeholder-img graphic-3">
-                                <i class="fa-solid fa-car-burst"></i>
+                            <img src="images/projects/bspd/bspd1.jpg" alt="Brake Plausibility Device" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-placeholder-img graphic-2">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-name">Brake System Plausibility Device (BSPD)</h3>
-                            <p class="project-desc">A dual-layer race-safety board built with Altium Designer to satisfy strict Formula Bharat safety protocols. Monitors simultaneous brake pressure and accelerator vectors to trigger immediate motor power cutoffs during critical fault events.</p>
+                            <h3 class="project-name">Brake Plausibility Device (BSPD)</h3>
+                            <p class="project-desc">A safety-critical circuit designed for electric vehicles to automatically cut power when braking and acceleration occur simultaneously beyond specified tolerances.</p>
                             <div class="project-badges">
-                                <span class="badge">Altium Designer</span>
-                                <span class="badge">LTspice</span>
-                                <span class="badge">Analog Design</span>
-                                <span class="badge">Formula Bharat Compliance</span>
+                                <span class="badge">FSAE Standards</span>
+                                <span class="badge">Signal Conditioning</span>
+                                <span class="badge">Hardware Safety</span>
+                                <span class="badge">Altium</span>
                             </div>
                             <button class="btn-view-details" data-modal-open="modal-bspd">View Details <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </article>
 
-                    <!-- Project Card 4: Battery Management System -->
+                    <!-- Project Card 3: Smart Environment RTOS -->
                     <article class="project-card reveal-up interactive-card">
                         <div class="project-img-wrapper">
-                            <div class="project-placeholder-img graphic-4">
-                                <i class="fa-solid fa-battery-three-quarters"></i>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3 class="project-name">Battery Management System (BMS Slave)</h3>
-                            <p class="project-desc">An advanced 8-layer automotive electronic system engineered for precision EV pack monitoring. Deploys isolated cell diagnostics, passive terminal balancing metrics, and high-frequency communication links using an isolated SPI topology.</p>
-                            <div class="project-badges">
-                                <span class="badge">PCB Design</span>
-                                <span class="badge">Altium</span>
-                                <span class="badge">ISO-SPI</span>
-                                <span class="badge">EV Battery Systems</span>
-                            </div>
-                            <button class="btn-view-details" data-modal-open="modal-bms">View Details <i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 5: Electronic Control Unit -->
-                    <article class="project-card reveal-up interactive-card">
-                        <div class="project-img-wrapper">
-                            <div class="project-placeholder-img graphic-1">
+                            <img src="images/projects/smart-environment.jpeg" alt="Smart Environment using RTOS" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-placeholder-img graphic-3">
                                 <i class="fa-solid fa-microchip"></i>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3 class="project-name">Electronic Control Unit (ECU)</h3>
-                            <p class="project-desc">High-performance STM32 embedded firmware execution featuring a robust multi-bus architecture integrating critical vehicle tracking modules. Validated systematically via detailed Software-in-the-Loop simulation testing strategies.</p>
+                            <h3 class="project-name">Smart Environment Monitoring System via RTOS</h3>
+                            <p class="project-desc">A highly deterministic real-time embedded system engineered to handle concurrent task scheduling for environmental sensing nodes without data collisions.</p>
                             <div class="project-badges">
-                                <span class="badge">STM32</span>
-                                <span class="badge">Embedded C</span>
-                                <span class="badge">HAL Library</span>
-                                <span class="badge">CAN Bus</span>
-                                <span class="badge">SIL Testing</span>
+                                <span class="badge">FreeRTOS</span>
+                                <span class="badge">ESP32 / STM32</span>
+                                <span class="badge">Task Scheduling</span>
+                                <span class="badge">Sensors Array</span>
                             </div>
-                            <button class="btn-view-details" data-modal-open="modal-ecu">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn-view-details" data-modal-open="modal-environment">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 4: CCTV -->
+                    <article class="project-card reveal-up interactive-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/projects/cctv1.jpg" alt="Smart Wireless CCTV System" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-placeholder-img graphic-4">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Smart Wireless CCTV Monitoring System</h3>
+                            <p class="project-desc">A highly responsive edge surveillance asset delivering low-latency imaging streams integrated with an algorithmic alert matrix triggered via automated chat bots.</p>
+                            <div class="project-badges">
+                                <span class="badge">ESP32 CAM</span>
+                                <span class="badge">Telegram Bot</span>
+                                <span class="badge">WiFi Telemetry</span>
+                            </div>
+                            <button class="btn-view-details" data-modal-open="modal-cctv">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 5: Plant Disease Detection -->
+                    <article class="project-card reveal-up interactive-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/projects/plant1.jpg" alt="Plant Disease Detection Engine" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-placeholder-img graphic-5">
+                                <i class="fa-solid fa-seedling"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Plant Disease Detection Engine</h3>
+                            <p class="project-desc">An optimized computer vision architecture capable of interpreting visual plant strain abnormalities and generating diagnostic health scores with accuracy metrics.</p>
+                            <div class="project-badges">
+                                <span class="badge">CNN</span>
+                                <span class="badge">TensorFlow</span>
+                                <span class="badge">Python</span>
+                                <span class="badge">Edge AI</span>
+                            </div>
+                            <button class="btn-view-details" data-modal-open="modal-plant">View Details <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </article>
 
@@ -387,217 +389,174 @@
          ========================================================================== -->
     <div class="modal-overlay" id="modalOverlay">
         
-        <!-- PROJECT 1: ENVIRONMENT MONITORING SYSTEM MODAL -->
-        <div class="modal-window" id="modal-environment">
-            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
-            <div class="modal-body-grid">
-                <div class="modal-gallery-side">
-                    <div class="gallery-main-view">
-                        <div class="project-placeholder-img graphic-1" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
-                            <i class="fa-solid fa-cloud-sun-rain" style="font-size: 80px; color: var(--primary-color, #38bdf8);"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-info-side">
-                    <span class="modal-meta-tag"><i class="fa-solid fa-microchip"></i> Multitasking RTOS Application</span>
-                    <h2 class="modal-case-title">Real-time Environment Monitoring System using ESP &amp; FreeRTOS</h2>
-                    <div class="modal-heading-divider"></div>
-                    
-                    <h3 class="modal-section-heading">Project Overview</h3>
-                    <p class="modal-paragraph-text">
-                        Developed a highly efficient, real-time environmental data acquisition and logging framework using an ESP32 micro-controller and FreeRTOS. The implementation leverages real-time preemptive scheduling to execute deterministic multi-sensor measurements and maintain high-reliability communications simultaneously.
-                    </p>
-                    
-                    <h3 class="modal-section-heading">Technical Stack &amp; Tools</h3>
-                    <div class="project-badges" style="margin-bottom: 20px;">
-                        <span class="badge">ESP32</span>
-                        <span class="badge">FreeRTOS</span>
-                        <span class="badge">Embedded C</span>
-                        <span class="badge">Wi-Fi</span>
-                        <span class="badge">Web Server</span>
-                        <span class="badge">DHT11</span>
-                        <span class="badge">MQ135</span>
-                        <span class="badge">OLED Display</span>
-                    </div>
-
-                    <h3 class="modal-section-heading">Key Engineering Implementations</h3>
-                    <ul class="modal-specification-list">
-                        <li><strong>Sensor Array Integration:</strong> Directly integrated physical DHT11 and MQ135 sensor components to log atmospheric ambient temperature, relative humidity metrics, and air quality ratings.</li>
-                        <li><strong>FreeRTOS Multitasking Architecture:</strong> Designed concurrent deterministic tasks to manage independent sensor telemetry loops, high-frequency OLED graphical display updates, and standard asynchronous Wi-Fi web server data serving cycles simultaneously.</li>
-                        <li><strong>Validation &amp; Debugging:</strong> Systematically verified sensor-to-bus peripheral connectivity interfaces and confirmed strict timing constraints via comprehensive functional integration test coverage.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- PROJECT 2: TRACTIVE SYSTEM ACTIVE LIGHT MODAL -->
+        <!-- PROJECT 1: TSAL MODAL WINDOW -->
         <div class="modal-window" id="modal-tsal">
             <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
             <div class="modal-body-grid">
                 <div class="modal-gallery-side">
-                    <div class="gallery-main-view">
-                        <div class="project-placeholder-img graphic-2" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
-                            <i class="fa-solid fa-bolt-lightning" style="font-size: 80px; color: #fbbf24;"></i>
-                        </div>
+                    <div class="gallery-main-frame">
+                        <img src="images/projects/tsal/tsal1.jpg" alt="TSAL Layout View" id="tsalMainDisplay">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img src="images/projects/tsal/tsal1.jpg" alt="Thumb 1" class="thumb-img active-thumb" onclick="updateModalGallery('tsalMainDisplay', this)">
+                        <img src="images/projects/tsal/tsal2.jpg" alt="Thumb 2" class="thumb-img" onclick="updateModalGallery('tsalMainDisplay', this)">
+                        <img src="images/projects/tsal/tsal3.jpg" alt="Thumb 3" class="thumb-img" onclick="updateModalGallery('tsalMainDisplay', this)">
+                        <img src="images/projects/tsal/tsal4.jpg" alt="Thumb 4" class="thumb-img" onclick="updateModalGallery('tsalMainDisplay', this)">
+                        <img src="images/projects/tsal/tsal5.jpg" alt="Thumb 5" class="thumb-img" onclick="updateModalGallery('tsalMainDisplay', this)">
                     </div>
                 </div>
                 <div class="modal-info-side">
-                    <span class="modal-meta-tag"><i class="fa-solid fa-car-battery"></i> EV Safety Systems</span>
+                    <span class="modal-meta-tag"><i class="fa-solid fa-bolt-lightning"></i> High-Voltage EV Safety</span>
                     <h2 class="modal-case-title">Tractive System Active Light (TSAL)</h2>
                     <div class="modal-heading-divider"></div>
-                    
                     <h3 class="modal-section-heading">Project Overview</h3>
                     <p class="modal-paragraph-text">
-                        Designed, optimized, and built a custom Tractive System Active Light system tailored for Electric Vehicles. This hardware architecture delivers deep immersion into advanced discrete analog circuit topologies and precise PCB development constraints to explicitly track and indicate live battery accumulator high-voltage states.
+                        Engineered a safety-critical evaluation framework built strictly to Formula Student criteria. It directly observes high-voltage accumulator links and commands safety indicator arrays to visually signify the system's live power state without introducing operational lag.
                     </p>
-
-                    <h3 class="modal-section-heading">State Indication Logic Breakdown</h3>
+                    <h3 class="modal-section-heading">Key Features &amp; Capabilities</h3>
                     <ul class="modal-specification-list">
-                        <li>🔴 <strong>Active Hazard Notification:</strong> Outputs a highly visible red blinking light state whenever live bus potentials cross beyond the critical <span style="color: #ef4444; font-weight:600;">60V</span> envelope.</li>
-                        <li>🟢 <strong>Safe Status Configuration:</strong> Actuates a solid green indicator lamp output whenever voltage drops safely beneath the <span style="color: #22c55e; font-weight:600;">60V</span> threshold limit.</li>
-                        <li>⚫ <strong>Single Wire Fault Safe-State:</strong> Automatically drops all visual indicators to a complete dark zero-power state during system failures to isolate hazardous false-positives.</li>
+                        <li><strong>Voltage Monitoring:</strong> Accurate isolation sensing pathways measuring up to high-voltage electric powertrain limits.</li>
+                        <li><strong>Failsafe Architecture:</strong> Implemented hardware interlock monitoring loops that guarantee visual alert consistency under active states.</li>
+                        <li><strong>Custom PCB Design:</strong> Multi-layer, low-noise footprint developed using professional layout practices to withstand extreme environments.</li>
                     </ul>
-
-                    <h3 class="modal-section-heading">Architecture Redesign &amp; Optimization Metrics</h3>
-                    <p class="modal-paragraph-text">
-                        Transitioned the classic safety architecture into an optimized Op-Amp comparator plus 555-Timer oscillation topology embedded with single-wire fault protection loops. This architectural design choice achieved key efficiency goals:
-                    </p>
-                    <div class="metric-highlights-box">
-                        <div class="metric-stat-item"><span class="metric-value">~15%</span><span class="metric-label">Faster Response Speed</span></div>
-                        <div class="metric-stat-item"><span class="metric-value">~25%</span><span class="metric-label">PCB Size Reduction</span></div>
-                    </div>
-
-                    <div class="modal-footer-cta" style="margin-top: 20px;">
-                        <a href="https://www.linkedin.com/posts/amule29_embeddedsystems-evtechnology-pcbdesign-activity-7456168092021358592-4ZgP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbqeA0BgyDCYYB-FxN12ZqLI_Dw8xxLpiQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">View Project Post on LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+                    <div class="modal-footer-cta">
+                        <a href="https://github.com/mabhi29" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">Explore Source Code <i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- PROJECT 3: BRAKE SYSTEM PLAUSIBILITY DEVICE MODAL -->
+        <!-- PROJECT 2: BSPD MODAL WINDOW -->
         <div class="modal-window" id="modal-bspd">
             <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
             <div class="modal-body-grid">
                 <div class="modal-gallery-side">
-                    <div class="gallery-main-view">
-                        <div class="project-placeholder-img graphic-3" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
-                            <i class="fa-solid fa-car-burst" style="font-size: 80px; color: #f43f5e;"></i>
-                        </div>
+                    <div class="gallery-main-frame">
+                        <img src="images/projects/bspd/bspd1.jpg" alt="BSPD Layout View" id="bspdMainDisplay">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img src="images/projects/bspd/bspd1.jpg" alt="Thumb 1" class="thumb-img active-thumb" onclick="updateModalGallery('bspdMainDisplay', this)">
+                        <img src="images/projects/bspd/bspd2.jpg" alt="Thumb 2" class="thumb-img" onclick="updateModalGallery('bspdMainDisplay', this)">
+                        <img src="images/projects/bspd/bspd3.jpg" alt="Thumb 3" class="thumb-img" onclick="updateModalGallery('bspdMainDisplay', this)">
                     </div>
                 </div>
                 <div class="modal-info-side">
-                    <span class="modal-meta-tag"><i class="fa-solid fa-trophy"></i> Formula Bharat Compliance</span>
-                    <h2 class="modal-case-title">Brake System Plausibility Device (BSPD)</h2>
+                    <span class="modal-meta-tag"><i class="fa-solid fa-triangle-exclamation"></i> Safety Control Systems</span>
+                    <h2 class="modal-case-title">Brake Plausibility Device (BSPD)</h2>
                     <div class="modal-heading-divider"></div>
-                    
                     <h3 class="modal-section-heading">Project Overview</h3>
                     <p class="modal-paragraph-text">
-                        Designed, assembled, and validated a robust two-layer Brake System Plausibility Device (BSPD) circuit board using Altium Designer for Team Kratos Racing Electric India. The safety asset continuously monitors concurrent pedal telemetry errors to preserve cockpit mechanical integrity.
+                        Designed an independent safety monitoring circuit to systematically drop the tractive system shutdown loop when structural non-plausibility limits (simultaneous high-power throttle and heavy braking actions) are systematically reached.
                     </p>
-
-                    <h3 class="modal-section-heading">Functional &amp; Regulatory Specifications</h3>
+                    <h3 class="modal-section-heading">Key Features &amp; Capabilities</h3>
                     <ul class="modal-specification-list">
-                        <li><strong>Automatic Safety Cutoff:</strong> Opens the master vehicle shutdown path automatically if motor power yields over 5 kW simultaneously while hydraulic brake lines pass 30 bar.</li>
-                        <li><strong>Formula Bharat Rulebook Compliance:</strong> Features direct internal current distribution from the Low Voltage Master Switch (LVMS) with minimal auxiliary hardware line splits.</li>
-                        <li><strong>Sensor Signal Integration:</strong> Deploys specialized configurations to capture differential inputs from physical analog brake transducers and primary DC current tracks.</li>
+                        <li><strong>Analog Imbalance Verification:</strong> Deploys ultra-low propagation delay operational amplifiers to detect input anomalies.</li>
+                        <li><strong>Non-Programmable Safety:</strong> Constructed purely via hardwired analog logic configurations to meet stringent non-programmable vehicle safety compliance demands.</li>
+                        <li><strong>Robust Noise Rejection:</strong> Built-in hardware filtering steps to isolate signal anomalies away from high-noise vehicle motor control lines.</li>
                     </ul>
-
-                    <h3 class="modal-section-heading">Engineering Challenges &amp; Solutions</h3>
-                    <p class="modal-paragraph-text">
-                        <strong>1. Component Placement &amp; Densities:</strong> Spatial boundary guidelines imposed complex routing bottlenecks. Optimized trace paths using iterative layout evaluations to preserve safe high-voltage spatial boundaries.<br>
-                        <strong>2. Trace Routing &amp; Signal Integrity:</strong> Analog trace noise threatened rulebook compliance. Leveraged high-precision track shielding loops and verified signal cleanliness via extensive LTspice simulation profiles.
-                    </p>
-
-                    <h3 class="modal-section-heading">Topological Optimization Improvements</h3>
-                    <p class="modal-paragraph-text">
-                        Replaced obsolete digital logic arrays with an optimized Op-Amp comparator plus discrete MOSFET safety circuit path to maximize response stability.
-                    </p>
-                    <div class="metric-highlights-box">
-                        <div class="metric-stat-item"><span class="metric-value">35%</span><span class="metric-label">PCB Footprint Reduction</span></div>
-                        <div class="metric-stat-item"><span class="metric-value">18%</span><span class="metric-label">Response Delay Speedup</span></div>
-                    </div>
-
-                    <div class="modal-footer-cta" style="margin-top: 20px;">
-                        <a href="https://www.linkedin.com/posts/amule29_pcblayout-pcbdesign-altiumdesigner-activity-7239327830646419456-ShMq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbqeA0BgyDCYYB-FxN12ZqLI_Dw8xxLpiQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">View Design Post on LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+                    <div class="modal-footer-cta">
+                        <a href="https://github.com/mabhi29" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">Explore Source Code <i class="fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- PROJECT 4: BATTERY MANAGEMENT SYSTEM MODAL -->
-        <div class="modal-window" id="modal-bms">
+        <!-- PROJECT 3: SMART ENVIRONMENT RTOS MODAL WINDOW -->
+        <div class="modal-window" id="modal-environment">
             <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
             <div class="modal-body-grid">
                 <div class="modal-gallery-side">
-                    <div class="gallery-main-view">
-                        <div class="project-placeholder-img graphic-4" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
-                            <i class="fa-solid fa-battery-three-quarters" style="font-size: 80px; color: #10b981;"></i>
-                        </div>
+                    <div class="gallery-main-frame">
+                        <img src="images/projects/smart-environment.jpeg" alt="RTOS Architecture Display" id="rtosMainDisplay">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img src="images/projects/smart-environment.jpeg" alt="Thumb 1" class="thumb-img active-thumb" onclick="updateModalGallery('rtosMainDisplay', this)">
                     </div>
                 </div>
                 <div class="modal-info-side">
-                    <span class="modal-meta-tag"><i class="fa-solid fa-layer-group"></i> Multilayer Hardware Engineering</span>
-                    <h2 class="modal-case-title">Battery Management System (BMS Slave)</h2>
+                    <span class="modal-meta-tag"><i class="fa-solid fa-microchip"></i> Real-Time Operating Systems</span>
+                    <h2 class="modal-case-title">Smart Environment via RTOS</h2>
                     <div class="modal-heading-divider"></div>
-                    
                     <h3 class="modal-section-heading">Project Overview</h3>
                     <p class="modal-paragraph-text">
-                        Collaborated on the hardware design, manufacturing assembly, and electrical verification of an advanced 8-layer BMS slave printed circuit board configuration. The hardware stack handles dense multi-layer trace signals across a multi-board module configuration to check lithium cell voltages reliably.
+                        Engineered a reliable real-time environmental monitoring platform utilizing FreeRTOS kernel routines. This architecture manages concurrent data acquisition tasks, processing multi-sensor telemetry packets smoothly while running deterministic priority-based scheduling execution.
                     </p>
-                    
-                    <h3 class="modal-section-heading">Tech Stack &amp; Protocols</h3>
-                    <div class="project-badges" style="margin-bottom: 20px;">
-                        <span class="badge">PCB Design</span>
-                        <span class="badge">Altium Designer</span>
-                        <span class="badge">ISO-SPI Communication</span>
-                        <span class="badge">EV Battery Systems</span>
-                        <span class="badge">Signal Integrity</span>
-                    </div>
-
-                    <h3 class="modal-section-heading">Key Implementation Aspects</h3>
+                    <h3 class="modal-section-heading">Key Features &amp; Capabilities</h3>
                     <ul class="modal-specification-list">
-                        <li><strong>Isolated Communication:</strong> Implemented a high-efficiency ISO-SPI isolated networking standard to bridge data paths cleanly from Slave nodes to the primary BMS Master assembly.</li>
-                        <li><strong>Cell Protection Metrics:</strong> Embedded independent high-precision voltage sensing lines, thermal telemetry loops, and localized passive cell balancing control switches per node.</li>
-                        <li><strong>Cross-Functional Debugging:</strong> Coordinated hardware integration workflows with mechanical casing and software control teams while tracking operational hardware bugs down to isolated firmware registers.</li>
+                        <li><strong>Deterministic Scheduling:</strong> Eliminated processing collisions by setting up explicit context switches between background logging tasks and critical threshold monitoring routines.</li>
+                        <li><strong>Inter-Task Interfacing:</strong> Implemented safe queue architectures to efficiently pass variable strings from raw sensing components straight into storage matrices.</li>
+                        <li><strong>Telemetry Stability:</strong> Minimizes CPU cycle overheads to maximize power budgeting over remote deployment sectors.</li>
                     </ul>
+                    <div class="modal-footer-cta">
+                        <a href="https://github.com/mabhi29" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">Explore Source Code <i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- PROJECT 5: ELECTRONIC CONTROL UNIT MODAL -->
-        <div class="modal-window" id="modal-ecu">
+        <!-- PROJECT 4: CCTV MODAL WINDOW -->
+        <div class="modal-window" id="modal-cctv">
             <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
             <div class="modal-body-grid">
                 <div class="modal-gallery-side">
-                    <div class="gallery-main-view">
-                        <div class="project-placeholder-img graphic-1" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
-                            <i class="fa-solid fa-microchip" style="font-size: 80px; color: #a855f7;"></i>
-                        </div>
+                    <div class="gallery-main-frame">
+                        <img src="images/projects/cctv1.jpg" alt="CCTV System Layout" id="cctvMainDisplay" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22100%25%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%231E293B%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-size=%2220%22>Smart CCTV Architecture</text></svg>';">
                     </div>
                 </div>
                 <div class="modal-info-side">
-                    <span class="modal-meta-tag"><i class="fa-solid fa-terminal"></i> Embedded Firmware Architecture</span>
-                    <h2 class="modal-case-title">Electronic Control Unit for Electric Vehicle</h2>
+                    <span class="modal-meta-tag"><i class="fa-solid fa-video"></i> Edge AI &amp; Wireless Telemetry</span>
+                    <h2 class="modal-case-title">Smart Wireless CCTV Monitoring System</h2>
                     <div class="modal-heading-divider"></div>
-                    
                     <h3 class="modal-section-heading">Project Overview</h3>
                     <p class="modal-paragraph-text">
-                        Programmed and optimized the primary core embedded system firmware for an STM32-based automotive Electronic Control Unit (ECU). The implementation manages multiple high-speed vehicular peripheral buses, processing core control loop algorithms dynamically.
+                        Engineered an autonomous, low-latency surveillance node deployed on the edge. This system processes optical captures locally, maintaining persistent high-efficiency wireless video streams while evaluating alert matrices over private networking configurations.
                     </p>
-
-                    <h3 class="modal-section-heading">Technical Architecture Breakdown</h3>
+                    <h3 class="modal-section-heading">Key Features &amp; Capabilities</h3>
                     <ul class="modal-specification-list">
-                        <li><strong>Multi-Protocol Bus Integration:</strong> Developed low-level controller logic routines to execute concurrent communication over CAN, UART, SPI, and RS232 telemetry channels.</li>
-                        <li><strong>Sensor Telemetry Fusion:</strong> Structured data collection interfaces to parse realtime vectors from on-board IMUs, brake position sensors, steering encoders, and wheel-speed tracks.</li>
-                        <li><strong>Software-in-the-Loop Validation:</strong> Verified control algorithms and error isolation procedures using systematic Software-in-the-Loop (SIL) diagnostic configurations.</li>
-                        <li><strong>Fault Diagnostic Loops:</strong> Developed hardware-software error detection algorithms to support debugging, troubleshooting, and rapid isolation of vehicle electronics faults.</li>
+                        <li><strong>Edge Processing Engine:</strong> Employs dedicated low-power microcontrollers to capture, process, and broadcast motion images.</li>
+                        <li><strong>Instant Telemetry Gateway:</strong> Directly integrated with automated structural chatbot loops to broadcast real-time status alerts and event captures securely.</li>
+                        <li><strong>Stream Optimization:</strong> Dynamically optimizes compression coefficients based on network bandwidth to guarantee stream continuity.</li>
                     </ul>
+                    <div class="modal-footer-cta">
+                        <a href="https://github.com/mabhi29" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">Explore Source Code Repository <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 5: PLANT DETECTION MODAL WINDOW -->
+        <div class="modal-window" id="modal-plant">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-frame">
+                        <img src="images/projects/plant1.jpg" alt="AI Model Matrix" id="plantMainDisplay" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22100%25%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%231E293B%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-size=%2220%22>AI Model Matrix</text></svg>';">
+                    </div>
+                </div>
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-seedling"></i> Computer Vision &amp; Deep Learning</span>
+                    <h2 class="modal-case-title">Plant Disease Detection Engine</h2>
+                    <div class="modal-heading-divider"></div>
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Developed an end-to-end deep learning workflow using Convolutional Neural Networks (CNNs) trained to classify agricultural foliage anomalies. Optimized network inference metrics to allow potential future scaling into lightweight processing units.
+                    </p>
+                    <h3 class="modal-section-heading">Key Features &amp; Capabilities</h3>
+                    <ul class="modal-specification-list">
+                        <li><strong>High Accuracy Matrix:</strong> Achieved high validation scores across diverse agricultural imaging test benchmarks.</li>
+                        <li><strong>TensorFlow Engine Optimization:</strong> Structured image data ingestion steps cleanly to speed up raw input training times.</li>
+                    </ul>
+                    <div class="modal-footer-cta">
+                        <a href="https://github.com/mabhi29" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">Explore Source Code Repository <i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <!-- JavaScript Base Injections -->
-<script src="js/main.js" defer></script></body>
+    <!-- JavaScript Application Handler -->
+    <script src="js/typing.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
 </html>
