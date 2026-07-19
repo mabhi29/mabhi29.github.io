@@ -1,22 +1,21 @@
 /**
  * ==========================================================================
  * ABHISHEK MULE PERSONAL PORTFOLIO ARCHITECTURE
- * CORE CONTROLLER & MODAL ENGINE
+ * CORE CONTROLLER CORESTACKS
  * ==========================================================================
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Page Loader Handler
+    // 1. Dismiss Application Loader Framework
     const pageLoader = document.getElementById('pageLoader');
     if (pageLoader) {
         window.addEventListener('load', () => {
             setTimeout(() => {
                 pageLoader.classList.add('fade-out');
-            }, 300);
+            }, 300); // Premium visual dwell time
         });
-        
-        // Fallback for network/asset delay
+        // Fallback for asset delays
         setTimeout(() => {
             if (!pageLoader.classList.contains('fade-out')) {
                 pageLoader.classList.add('fade-out');
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000);
     }
 
-    // 2. Mobile Navigation System
+    // 2. Mobile Nav Open/Close Interactions
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Scroll Tracker, Progress Bar & Scroll-Spy System
+    // 3. Header Scrolled Tracking & Dynamic Progress Bars
     const siteHeader = document.getElementById('siteHeader');
     const progressBar = document.getElementById('progressBar');
     const backToTop = document.getElementById('backToTop');
@@ -55,13 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollTop = window.scrollY;
         const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
         
-        // Scroll Progress Bar calculation
-        if (documentHeight > 0 && progressBar) {
+        // Progress Calculation
+        if (documentHeight > 0) {
             const scrollPercentage = (scrollTop / documentHeight) * 100;
-            progressBar.style.width = `${scrollPercentage}%`;
+            if (progressBar) progressBar.style.width = `${scrollPercentage}%`;
         }
 
-        // Header Transformation
+        // Header State Transformations
         if (siteHeader) {
             if (scrollTop > 50) {
                 siteHeader.classList.add('scrolled');
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Back to Top Button Toggle
+        // Back To Top Display Transitions
         if (backToTop) {
             if (scrollTop > 600) {
                 backToTop.style.opacity = '1';
@@ -81,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Section Scroll-Spy for Navigation Links
+        // Active Link Highlighting via Scroll Spy
         let currentSectionId = 'home';
         const sections = document.querySelectorAll('section');
         
@@ -100,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Desktop Mouse Glow Tracker
+    // 4. Premium Mouse Tracking Interactive Glow Elements
     const mouseGlow = document.getElementById('mouseGlow');
     if (mouseGlow && window.innerWidth > 768) {
         document.addEventListener('mousemove', (e) => {
@@ -113,14 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Scroll Reveal Animation Engine (Intersection Observer)
+    // 5. Intersection Observer Configuration (Scroll Reveal Engine)
     const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .zoom-in');
     
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                observer.unobserve(entry.target);
+                observer.unobserve(entry.target); // Reveal animation only runs once
             }
         });
     }, {
@@ -133,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(element);
     });
 
-    // 6. Interactive Ripple Effect for Buttons
+    // 6. Premium Button Action Ripple Micro-interactions
     const rippleButtons = document.querySelectorAll('.ripple');
     
     rippleButtons.forEach(btn => {
@@ -155,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 7. Hero Image Micro-Parallax
+    // 7. Micro-Parallax System for Hero Profiler Setup
     const heroImageWrapper = document.querySelector('.hero-image-wrapper');
     if (heroImageWrapper && window.innerWidth > 1024) {
         document.addEventListener('mousemove', (e) => {
@@ -164,76 +163,4 @@ document.addEventListener('DOMContentLoaded', () => {
             heroImageWrapper.style.transform = `rotateY(${axisX}deg) rotateX(${axisY}deg)`;
         });
     }
-
-    // 8. Modal Management Engine
-    const modalOverlay = document.getElementById('modalOverlay');
-    const triggerButtons = document.querySelectorAll('[data-modal-open]');
-
-    window.openModalWindow = (targetId) => {
-        if (!modalOverlay) return;
-
-        const activeModals = modalOverlay.querySelectorAll('.modal-window.active');
-        activeModals.forEach(modal => modal.classList.remove('active'));
-
-        const targetModal = document.getElementById(targetId);
-        if (targetModal) {
-            targetModal.classList.add('active');
-            modalOverlay.classList.add('modal-active');
-            document.body.style.overflow = 'hidden';
-        }
-    };
-
-    window.closeModalWindow = () => {
-        if (!modalOverlay) return;
-        
-        modalOverlay.classList.remove('modal-active');
-        
-        const allModals = modalOverlay.querySelectorAll('.modal-window');
-        allModals.forEach(modal => modal.classList.remove('active'));
-        
-        document.body.style.overflow = '';
-    };
-
-    triggerButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetModalId = btn.getAttribute('data-modal-open');
-            window.openModalWindow(targetModalId);
-        });
-    });
-
-    if (modalOverlay) {
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) {
-                window.closeModalWindow();
-            }
-        });
-        
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modalOverlay.classList.contains('modal-active')) {
-                window.closeModalWindow();
-            }
-        });
-    }
-
-    // 9. Gallery Thumbnail Swapper
-    window.updateModalGallery = function(displayId, thumbnailElement) {
-        const mainDisplay = document.getElementById(displayId);
-        if (!mainDisplay || !thumbnailElement) return;
-
-        mainDisplay.style.opacity = '0.25';
-        
-        setTimeout(() => {
-            mainDisplay.src = thumbnailElement.src;
-            mainDisplay.alt = thumbnailElement.alt;
-            mainDisplay.style.opacity = '1';
-        }, 130);
-
-        const parentGallery = thumbnailElement.parentElement;
-        if (parentGallery) {
-            const siblingThumbs = parentGallery.querySelectorAll('.thumb-img');
-            siblingThumbs.forEach(thumb => thumb.classList.remove('active-thumb'));
-        }
-        
-        thumbnailElement.classList.add('active-thumb');
-    };
 });

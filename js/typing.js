@@ -17,6 +17,7 @@ class PremiumTypewriter {
         this.isErasing = false;
         
         if (this.element) {
+            // Apply signature structural text block styles instantly
             this.element.style.borderRight = '2px solid var(--accent-green)';
             this.element.style.paddingRight = '4px';
             this.executeLoop();
@@ -27,21 +28,25 @@ class PremiumTypewriter {
         const currentFullString = this.strings[this.stringIndex];
         
         if (!this.isErasing) {
+            // Build Character Matrix
             this.element.textContent = currentFullString.substring(0, this.charIndex + 1);
             this.charIndex++;
 
             if (this.charIndex === currentFullString.length) {
+                // Pause at complete string state
                 this.isErasing = true;
                 setTimeout(() => this.executeLoop(), this.delayBetween);
             } else {
                 setTimeout(() => this.executeLoop(), this.typeSpeed);
             }
         } else {
+            // Erase Character Matrix
             this.element.textContent = currentFullString.substring(0, this.charIndex - 1);
             this.charIndex--;
 
             if (this.charIndex === 0) {
                 this.isErasing = false;
+                // Transition pointer to next sequence item
                 this.stringIndex = (this.stringIndex + 1) % this.strings.length;
                 setTimeout(() => this.executeLoop(), 400);
             } else {

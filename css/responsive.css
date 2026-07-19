@@ -1,62 +1,182 @@
 /* ==========================================================================
-   RESPONSIVE STRUCTURAL OVERRIDES
+   AGENCY RESPONSIVE GRID CONFIGURATIONS
    ========================================================================== */
 
-@media (max-width: 992px) {
+/* 1. Large Screen Adjustments (1200px) */
+@media (max-width: 1200px) {
+    .container, .nav-container {
+        padding: 0 32px;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
     .about-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-    
-    .modal-scroll-container {
-        padding: 2rem;
-    }
-    
-    .gallery-main-frame {
-        height: 280px;
+        gap: 50px;
     }
 }
 
+/* 2. Laptop Adjustments (1024px) */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+    .hero-profile-img {
+        width: 290px;
+        height: 330px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .about-image-side {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .projects-grid {
+        gap: 30px;
+    }
+}
+
+/* 3. Tablet Device Framework (768px) */
 @media (max-width: 768px) {
+    .section-padding {
+        padding: 90px 0;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    /* Mobile Menu Execution */
     .nav-menu {
-        display: none; /* Add standard mobile drawer toggle pattern if required */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        box-shadow: -10px 0 40px rgba(0,0,0,0.05);
+        z-index: 1001;
+        padding: 120px 40px 40px 40px;
+        transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    
-    .hero-content h1 {
-        font-size: 2.2rem;
+    .nav-menu.active {
+        right: 0;
     }
-    
-    .hero-cta {
+    .nav-menu ul {
         flex-direction: column;
-        gap: 1rem;
+        gap: 28px;
+    }
+    .nav-link {
+        font-size: 1.2rem;
+        display: block;
+    }
+    
+    /* Active Toggle Icon Shapes */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: var(--accent-green);
+    }
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--accent-green);
+    }
+
+    .nav-actions {
+        margin-right: 45px;
+    }
+
+    /* Layout Collapses */
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .hero-image-wrapper {
+        order: -1;
+    }
+    
+    .about-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
     
     .projects-grid {
         grid-template-columns: 1fr;
+        max-width: 550px;
+        margin: 0 auto;
     }
     
-    .modal-overlay {
-        padding: 0.5rem;
+    .timeline-line {
+        left: 16px;
+    }
+    .timeline-item {
+        padding-left: 50px;
+    }
+    .timeline-dot {
+        left: 8px;
     }
     
-    .modal-wrapper {
-        max-height: 95vh;
+    .contact-card {
+        padding: 60px 24px;
     }
-    
-    .modal-scroll-container {
-        padding: 1.5rem;
-        max-height: 95vh;
+    .contact-main-heading {
+        font-size: 2.2rem;
     }
-    
-    .modal-header h2 {
-        font-size: 1.6rem;
+}
+
+/* 4. Compact Mobile Framework (480px) */
+@media (max-width: 480px) {
+    .container, .nav-container {
+        padding: 0 20px;
     }
-    
-    .gallery-main-frame {
-        height: 200px;
+    .hero-title {
+        font-size: 2.3rem;
+    }
+    .typing-wrapper {
+        font-size: 1.1rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-actions .btn {
+        display: none;
+    }
+    .nav-actions {
+        margin-right: 25px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .contact-main-heading {
+        font-size: 1.75rem;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
 }

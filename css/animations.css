@@ -31,21 +31,18 @@
     pointer-events: none;
     z-index: 1;
 }
-
 .blob {
     position: absolute;
     background: linear-gradient(135deg, rgba(216,243,220,0.25) 0%, rgba(123,196,127,0.15) 100%);
     filter: blur(40px);
     animation: blobMorph 12s infinite alternate ease-in-out;
 }
-
 .blob-1 {
     width: 500px;
     height: 500px;
     top: -10%;
     right: -10%;
 }
-
 .blob-2 {
     width: 400px;
     height: 400px;
@@ -58,7 +55,6 @@
 .image-border-glow {
     animation: premiumFloat 6s ease-in-out infinite;
 }
-
 @keyframes premiumFloat {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-12px); }
@@ -71,7 +67,6 @@
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: transform, opacity;
 }
-
 .reveal-up { transform: translateY(50px); }
 .reveal-left { transform: translateX(-50px); }
 .reveal-right { transform: translateX(50px); }
@@ -91,7 +86,6 @@
     animation: rippleAnim 0.6s linear;
     pointer-events: none;
 }
-
 @keyframes rippleAnim {
     to {
         transform: scale(4);
