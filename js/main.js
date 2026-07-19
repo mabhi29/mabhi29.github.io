@@ -3,6 +3,7 @@
  * ABHISHEK MULE PERSONAL PORTFOLIO ARCHITECTURE
  * CORE CONTROLLER CORESTACKS
  * ==========================================================================
+ * Updated: Unified Multi-Modal Targeting and Cross-Gallery Synchronization
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -168,69 +169,95 @@ document.addEventListener('DOMContentLoaded', () => {
     // ABHISHEK MULE INTERACTIVE CASE STUDY MODAL MANAGEMENT ENGINE
     // ==========================================================================
     const modalOverlay = document.getElementById('modalOverlay');
-    const modalCloseBtn = document.getElementById('modalClose');
     const triggerButtons = document.querySelectorAll('[data-modal-open]');
 
-    // Function to activate target view context
-    const openModalWindow = (targetId) => {
-        if (modalOverlay) {
+    /**
+     * Expose Opening Operation Globally to ensure clean modular control
+     */
+    window.openModalWindow = (targetId) => {
+        if (!modalOverlay) return;
+
+        // Step A: Close/Hide any previously visible active modal views first
+        const activeModals = modalOverlay.querySelectorAll('.modal-window.active');
+        activeModals.forEach(modal => modal.classList.remove('active'));
+
+        // Step B: Extract and target the specific workspace container
+        const targetModal = document.getElementById(targetId);
+        if (targetModal) {
+            targetModal.classList.add('active');
             modalOverlay.classList.add('modal-active');
-            document.body.style.overflow = 'hidden'; // Halt main structural scroll loops
+            document.body.style.overflow = 'hidden'; // Halt parent application scroll loop
         }
     };
 
-    // Function to safely tear down operational frame
-    const closeModalWindow = () => {
-        if (modalOverlay) {
-            modalOverlay.classList.remove('modal-active');
-            document.body.style.overflow = ''; // Restore structural scroll properties
-        }
+    /**
+     * Expose Closing Operation Globally to prevent inline 'onclick' ReferenceErrors
+     */
+    window.closeModalWindow = () => {
+        if (!modalOverlay) return;
+        
+        modalOverlay.classList.remove('modal-active');
+        
+        // Remove active state layers from all nested windows cleanly
+        const allModals = modalOverlay.querySelectorAll('.modal-window');
+        allModals.forEach(modal => modal.classList.remove('active'));
+        
+        document.body.style.overflow = ''; // Restore layout scroll defaults
     };
 
-    // Binding operations to registered DOM targets
+    // Bind event workflows to modern HTML structural data targets
     triggerButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            const TargetModal = btn.getAttribute('data-modal-open');
-            openModalWindow(TargetModal);
+            const targetModalId = btn.getAttribute('data-modal-open');
+            window.openModalWindow(targetModalId);
         });
     });
 
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener('click', closeModalWindow);
-    }
-
-    // Safety fallback execution: Close if developer clicks the abstract space outside
+    // Background Interceptor: Close if user clicks out inside the dark blur bounds
     if (modalOverlay) {
         modalOverlay.addEventListener('click', (e) => {
             if (e.target === modalOverlay) {
-                closeModalWindow();
+                window.closeModalWindow();
             }
         });
         
-        // Connect system Escape key loops
+        // System Keyboard Listener: Close active modules when tapping 'Escape'
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modalOverlay.classList.contains('modal-active')) {
-                closeModalWindow();
+                window.closeModalWindow();
             }
         });
     }
 
-    // Global Interactive Image Gallery Switcher Sub-system
-    window.updateTsalGallery = function(selectedSrc, thumbnailElement) {
-        const mainDisplay = document.getElementById('tsalMainDisplay');
-        if (!mainDisplay) return;
+    // ==========================================================================
+    // UNIVERSAL HIGH-FIDELITY CASE STUDY IMAGE INTERFACE SYSTEM
+    // ==========================================================================
+    /**
+     * Dynamically swaps viewing assets within any modular canvas frame
+     * @param {string} displayId - The unique ID target of the principal view display element
+     * @param {HTMLElement} thumbnailElement - The DOM instance reference of the clicked control thumbnail
+     */
+    window.updateModalGallery = function(displayId, thumbnailElement) {
+        const mainDisplay = document.getElementById(displayId);
+        if (!mainDisplay || !thumbnailElement) return;
 
-        // Apply quick slick opacity shift
-        mainDisplay.style.opacity = '0.3';
+        // Apply visual transition cushion
+        mainDisplay.style.opacity = '0.25';
         
         setTimeout(() => {
-            mainDisplay.src = selectedSrc;
+            mainDisplay.src = thumbnailElement.src;
+            mainDisplay.alt = thumbnailElement.alt;
             mainDisplay.style.opacity = '1';
-        }, 150);
+        }, 130);
 
-        // Standardize class arrays across siblings
-        const allThumbs = document.querySelectorAll('.thumb-img');
-        allThumbs.forEach(thumb => thumb.classList.remove('active-thumb'));
+        // Discard active tag rings inside the context module gallery
+        const parentGallery = thumbnailElement.parentElement;
+        if (parentGallery) {
+            const siblingThumbs = parentGallery.querySelectorAll('.thumb-img');
+            siblingThumbs.forEach(thumb => thumb.classList.remove('active-thumb'));
+        }
+        
+        // Affix premium visual highlight frame to the active control asset
         thumbnailElement.classList.add('active-thumb');
     };
     

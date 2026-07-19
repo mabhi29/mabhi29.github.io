@@ -37,7 +37,25 @@
     }
 }
 
-/* 3. Tablet Device Framework (768px) */
+/* 3. Intermediate Modal Layout Adaptations (992px) */
+@media (max-width: 992px) {
+    .modal-body-grid {
+        grid-template-columns: 1fr;
+    }
+    .modal-gallery-side {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 30px 24px;
+    }
+    .gallery-main-view {
+        height: 280px;
+    }
+    .modal-info-side {
+        padding: 36px 24px;
+    }
+}
+
+/* 4. Tablet Device Framework (768px) */
 @media (max-width: 768px) {
     .section-padding {
         padding: 90px 0;
@@ -46,7 +64,7 @@
         display: flex;
     }
     
-    /* Mobile Menu Execution */
+    /* Mobile Menu Execution with Performance Micro-Optimizations */
     .nav-menu {
         position: fixed;
         top: 0;
@@ -61,6 +79,8 @@
         z-index: 1001;
         padding: 120px 40px 40px 40px;
         transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* Performance anchor for seamless iOS inertia scrolling */
     }
     .nav-menu.active {
         right: 0;
@@ -142,7 +162,18 @@
     }
 }
 
-/* 4. Compact Mobile Framework (480px) */
+/* 5. Mobile Fluid Column Scaling (576px) */
+@media (max-width: 576px) {
+    .modal-case-title {
+        font-size: 1.75rem;
+    }
+    .metric-highlights-box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* 6. Compact Mobile Framework (480px) */
 @media (max-width: 480px) {
     .container, .nav-container {
         padding: 0 20px;
@@ -178,32 +209,5 @@
         flex-direction: column;
         gap: 20px;
         text-align: center;
-    }
-}
-
-/* Modal Interface Response Conversions */
-@media (max-width: 992px) {
-    .modal-body-grid {
-        grid-template-columns: 1fr;
-    }
-    .modal-gallery-side {
-        border-right: none;
-        border-bottom: 1px solid var(--border-subtle);
-        padding: 30px 24px;
-    }
-    .gallery-main-view {
-        height: 280px;
-    }
-    .modal-info-side {
-        padding: 36px 24px;
-    }
-}
-@media (max-width: 576px) {
-    .modal-case-title {
-        font-size: 1.75rem;
-    }
-    .metric-highlights-box {
-        grid-template-columns: 1fr;
-        gap: 20px;
     }
 }

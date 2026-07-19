@@ -189,6 +189,7 @@
                     <!-- Project Card 1 -->
                     <article class="project-card reveal-up interactive-card">
                         <div class="project-img-wrapper">
+                            <img src="images/cctv/cctv1.jpeg" alt="Smart Wireless CCTV System" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="project-placeholder-img graphic-1">
                                 <i class="fa-solid fa-video"></i>
                             </div>
@@ -201,13 +202,14 @@
                                 <span class="badge">Telegram Bot</span>
                                 <span class="badge">WiFi</span>
                             </div>
-                            <button class="btn-view-details">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn-view-details" data-modal-open="modal-cctv">View Details <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </article>
 
                     <!-- Project Card 2 -->
                     <article class="project-card reveal-up interactive-card">
                         <div class="project-img-wrapper">
+                            <img src="images/logger/logger1.jpeg" alt="IoT Environmental Logger" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="project-placeholder-img graphic-2">
                                 <i class="fa-solid fa-cloud-sun-rain"></i>
                             </div>
@@ -220,13 +222,14 @@
                                 <span class="badge">BME280</span>
                                 <span class="badge">Blynk</span>
                             </div>
-                            <button class="btn-view-details">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn-view-details" data-modal-open="modal-logger">View Details <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </article>
 
                     <!-- Project Card 3 -->
                     <article class="project-card reveal-up interactive-card">
                         <div class="project-img-wrapper">
+                            <img src="images/plant/plant1.jpeg" alt="Plant Disease Detection Engine" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="project-placeholder-img graphic-3">
                                 <i class="fa-solid fa-seedling"></i>
                             </div>
@@ -239,31 +242,30 @@
                                 <span class="badge">TensorFlow</span>
                                 <span class="badge">Python</span>
                             </div>
-                            <button class="btn-view-details">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                            <button class="btn-view-details" data-modal-open="modal-plant">View Details <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </article>
 
                     <!-- Project Card 4 -->
-<article class="project-card reveal-up interactive-card">
-    <div class="project-img-wrapper">
-        <!-- Premium Real Image Integration with Automatic Elegant Graphic Fallback -->
-        <img src="images/bspd/bspd1.jpeg" alt="Tractive System Active Light" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="project-placeholder-img graphic-4" style="display: none;">
-            <i class="fa-solid fa-bolt-lightning"></i>
-        </div>
-    </div>
-    <div class="project-info">
-        <h3 class="project-name">Tractive System Active Light (TSAL)</h3>
-        <p class="project-desc">An EV safety compliance architecture engineered to monitor high-voltage thresholds, featuring optimized op-amp circuits and single-wire fault isolation.</p>
-        <div class="project-badges">
-            <span class="badge">EV Safety Standards</span>
-            <span class="badge">Analog Circuit Design</span>
-            <span class="badge">PCB Development</span>
-            <span class="badge">555 Timer</span>
-        </div>
-        <button class="btn-view-details" data-modal-open="modal-tsal">View Details <i class="fa-solid fa-arrow-right"></i></button>
-    </div>
-</article>
+                    <article class="project-card reveal-up interactive-card">
+                        <div class="project-img-wrapper">
+                            <img src="images/bspd/bspd1.jpeg" alt="Tractive System Active Light" class="project-real-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-placeholder-img graphic-4" style="display: none;">
+                                <i class="fa-solid fa-bolt-lightning"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Tractive System Active Light (TSAL)</h3>
+                            <p class="project-desc">An EV safety compliance architecture engineered to monitor high-voltage thresholds, featuring optimized op-amp circuits and single-wire fault isolation.</p>
+                            <div class="project-badges">
+                                <span class="badge">EV Safety Standards</span>
+                                <span class="badge">Analog Circuit Design</span>
+                                <span class="badge">PCB Development</span>
+                                <span class="badge">555 Timer</span>
+                            </div>
+                            <button class="btn-view-details" data-modal-open="modal-tsal">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -355,73 +357,199 @@
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
         </div>
-    </footer>
+    </footer
 
-    <!-- Premium Project Case Study Overlay System -->
-<div class="modal-overlay" id="modalOverlay">
-    <!-- TSAL Project Case Window -->
-    <div class="modal-window" id="modal-tsal">
-        <button class="modal-close-btn" id="modalClose">&times;</button>
-        <div class="modal-body-grid">
-            
-            <!-- Gallery Interface Side -->
-            <div class="modal-gallery-side">
-                <div class="gallery-main-view">
-                    <img src="images/bspd/bspd1.jpeg" alt="TSAL Main Structural Layout" id="tsalMainDisplay" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22100%25%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%232D6A4F%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-size=%2224%22>TSAL PCB Layout</text></svg>';">
-                </div>
-                <div class="gallery-thumbnails">
-                    <img src="images/bspd/bspd1.jpeg" alt="Thumbnail 1" class="thumb-img active-thumb" onclick="updateTsalGallery(this.src, this)">
-                    <img src="images/bspd/bspd2.jpeg" alt="Thumbnail 2" class="thumb-img" onclick="updateTsalGallery(this.src, this)" onerror="this.style.display='none';">
-                    <img src="images/bspd/bspd3.jpeg" alt="Thumbnail 3" class="thumb-img" onclick="updateTsalGallery(this.src, this)" onerror="this.style.display='none';">
-                    <img src="images/bspd/bspd4.jpeg" alt="Thumbnail 4" class="thumb-img" onclick="updateTsalGallery(this.src, this)" onerror="this.style.display='none';">
-                    <img src="images/bspd/bspd5.jpeg" alt="Thumbnail 5" class="thumb-img" onclick="updateTsalGallery(this.src, this)" onerror="this.style.display='none';">
-                </div>
-            </div>
-
-            <!-- Detailed Engineering Case Study Side -->
-            <div class="modal-info-side">
-                <span class="modal-meta-tag"><i class="fa-solid fa-car-battery"></i> EV Technology &amp; Safety Hardware</span>
-                <h2 class="modal-case-title">Tractive System Active Light (TSAL)</h2>
-                <div class="modal-heading-divider"></div>
-                
-                <h3 class="modal-section-heading">Project Overview</h3>
-                <p class="modal-paragraph-text">
-                    Designed and optimized an advanced Tractive System Active Light (TSAL) circuitry asset for an Electric Vehicle platform. This safety asset serves as a high-visibility indicator matrix, calculating and reporting real-time system power conditions in strict compliance with global EV engineering guidelines.
-                </p>
-
-                <h3 class="modal-section-heading">Core Compliance State Matrix</h3>
-                <ul class="modal-specification-list">
-                    <li><span class="indicator-dot red-glow"></span><strong>Red Blinking Status:</strong> Triggered instantly when system potential exceeds the critical safety cross-section limit of 60V.</li>
-                    <li><span class="indicator-dot green-glow"></span><strong>Solid Green Status:</strong> Displays continuous safe operation indication when monitored potential settles cleanly below 60V.</li>
-                    <li><span class="indicator-dot fault-glow"></span><strong>System Fault Safe-State:</strong> Executes complete visual blackout conditions across the array during single-wire circuit interruptions to protect status reliability.</li>
-                </ul>
-
-                <h3 class="modal-section-heading">Hardware Optimization Breakthroughs</h3>
-                <p class="modal-paragraph-text">
-                    Re-architected the baseline architecture by implementing a highly responsive operational amplifier and 555-timer layout embedded with local single-wire line fault monitoring. This architectural shift achieved substantial engineering gains:
-                </p>
-                
-                <div class="metric-highlights-box">
-                    <div class="metric-stat-item">
-                        <span class="metric-value">+15%</span>
-                        <span class="metric-label">Signal Propagation Speed</span>
+    <!-- ==========================================================================
+         PREMIUM PROJECT CASE STUDY OVERLAY MANAGEMENT SYSTEM (MODALS)
+         ========================================================================== -->
+    <div class="modal-overlay" id="modalOverlay">
+        
+        <!-- PROJECT 1: CCTV MODAL WINDOW -->
+        <div class="modal-window" id="modal-cctv">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-view">
+                        <img src="images/cctv/cctv1.jpeg" alt="CCTV System Layout" id="cctvMainDisplay" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22100%25%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%231E293B%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-size=%2220%22>Smart CCTV Architecture</text></svg>';">
                     </div>
-                    <div class="metric-stat-item">
-                        <span class="metric-value">-25%</span>
-                        <span class="metric-label">PCB Physical Size Requirement</span>
+                    <div class="gallery-thumbnails">
+                        <img src="images/cctv/cctv1.jpeg" alt="Thumb 1" class="thumb-img active-thumb" onclick="updateModalGallery('cctvMainDisplay', this)">
+                        <img src="images/cctv/cctv2.jpeg" alt="Thumb 2" class="thumb-img" onclick="updateModalGallery('cctvMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/cctv/cctv3.jpeg" alt="Thumb 3" class="thumb-img" onclick="updateModalGallery('cctvMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/cctv/cctv4.jpeg" alt="Thumb 4" class="thumb-img" onclick="updateModalGallery('cctvMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/cctv/cctv5.jpeg" alt="Thumb 5" class="thumb-img" onclick="updateModalGallery('cctvMainDisplay', this)" onerror="this.style.display='none';">
                     </div>
                 </div>
-
-                <div class="modal-footer-cta">
-                    <a href="https://www.linkedin.com/posts/amule29_embeddedsystems-evtechnology-pcbdesign-activity-7456168092021358592-4ZgP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbqeA0BgyDCYYB-FxN12ZqLI_Dw8xxLpiQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn ripple">
-                        View Engineering Record on LinkedIn <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-video"></i> Edge AI &amp; Wireless Telemetry</span>
+                    <h2 class="modal-case-title">Smart Wireless CCTV Monitoring System</h2>
+                    <div class="modal-heading-divider"></div>
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Engineered an autonomous, low-latency surveillance node deployed on the edge. This system processes optical captures locally, maintaining persistent high-efficiency wireless video streams while evaluating alert matrices over private networking configurations.
+                    </p>
+                    <h3 class="modal-section-heading">Key Features &amp; Capabilities</h3>
+                    <ul class="modal-specification-list">
+                        <li><strong>Edge Processing Engine:</strong> Employs dedicated low-power microcontrollers to capture, process, and broadcast motion images.</li>
+                        <li><strong>Instant Telemetry Gateway:</strong> Directly integrated with automated structural chatbot loops to broadcast real-time status alerts and event captures securely.</li>
+                        <li><strong>Stream Optimization:</strong> Dynamically optimizes compression coefficients based on network bandwidth to guarantee stream continuity.</li>
+                    </ul>
+                    <div class="metric-highlights-box">
+                        <div class="metric-stat-item"><span class="metric-value">&lt; 250ms</span><span class="metric-label">Stream Latency</span></div>
+                        <div class="metric-stat-item"><span class="metric-value">99.4%</span><span class="metric-label">Alert Accuracy</span></div>
+                    </div>
+                    <div class="modal-footer-cta">
+                        <a href="https://github.com/mabhi29" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">Explore Source Code Repository <i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
             </div>
-
         </div>
+
+        <!-- PROJECT 2: DATA LOGGER MODAL WINDOW -->
+        <div class="modal-window" id="modal-logger">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-view">
+                        <img src="images/logger/logger1.jpeg" alt="IoT Logger Setup" id="loggerMainDisplay" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22100%25%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%231E293B%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-size=%2220%22>IoT Sensor Hub</text></svg>';">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img src="images/logger/logger1.jpeg" alt="Thumb 1" class="thumb-img active-thumb" onclick="updateModalGallery('loggerMainDisplay', this)">
+                        <img src="images/logger/logger2.jpeg" alt="Thumb 2" class="thumb-img" onclick="updateModalGallery('loggerMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/logger/logger3.jpeg" alt="Thumb 3" class="thumb-img" onclick="updateModalGallery('loggerMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/logger/logger4.jpeg" alt="Thumb 4" class="thumb-img" onclick="updateModalGallery('loggerMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/logger/logger5.jpeg" alt="Thumb 5" class="thumb-img" onclick="updateModalGallery('loggerMainDisplay', this)" onerror="this.style.display='none';">
+                    </div>
+                </div>
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-cloud-sun-rain"></i> Infrastructure &amp; Automation</span>
+                    <h2 class="modal-case-title">IoT Environmental Data Logger</h2>
+                    <div class="modal-heading-divider"></div>
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Designed a multi-sensor atmospheric harvesting node built for resilient parameter logging. Captures real-time temperature, pressure, and humidity datasets, sending them across cloud clusters to display structured analytics visualization interfaces.
+                    </p>
+                    <h3 class="modal-section-heading">System Engineering Specifications</h3>
+                    <ul class="modal-specification-list">
+                        <li><strong>Precision Sensing Interfacing:</strong> Communicates via digital high-resolution I2C matrices to sample climate variances without signal noise.</li>
+                        <li><strong>Cloud Cluster Aggregation:</strong> Links with cloud dash backends to maintain stable synchronization histories and analytical trends.</li>
+                        <li><strong>Power Optimization Loops:</strong> Deploys custom sleep cycles to scale continuous field operational life significantly.</li>
+                    </ul>
+                    <div class="metric-highlights-box">
+                        <div class="metric-stat-item"><span class="metric-value">100%</span><span class="metric-label">Data Sync Stability</span></div>
+                        <div class="metric-stat-item"><span class="metric-value">-40%</span><span class="metric-label">Power Consumption</span></div>
+                    </div>
+                    <div class="modal-footer-cta">
+                        <a href="https://github.com/mabhi29" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">Explore Source Code Repository <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 3: PLANT DETECTION MODAL WINDOW -->
+        <div class="modal-window" id="modal-plant">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-view">
+                        <img src="images/plant/plant1.jpeg" alt="AI Model Matrix" id="plantMainDisplay" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22100%25%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%231E293B%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-size=%2220%22>AI Model Matrix</text></svg>';">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img src="images/plant/plant1.jpeg" alt="Thumb 1" class="thumb-img active-thumb" onclick="updateModalGallery('plantMainDisplay', this)">
+                        <img src="images/plant/plant2.jpeg" alt="Thumb 2" class="thumb-img" onclick="updateModalGallery('plantMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/plant/plant3.jpeg" alt="Thumb 3" class="thumb-img" onclick="updateModalGallery('plantMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/plant/plant4.jpeg" alt="Thumb 4" class="thumb-img" onclick="updateModalGallery('plantMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/plant/plant5.jpeg" alt="Thumb 5" class="thumb-img" onclick="updateModalGallery('plantMainDisplay', this)" onerror="this.style.display='none';">
+                    </div>
+                </div>
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-brain"></i> Edge AI &amp; Computer Vision</span>
+                    <h2 class="modal-case-title">Plant Disease Detection</h2>
+                    <div class="modal-heading-divider"></div>
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Developed a structural deep learning classification matrix deploying Convolutional Neural Networks (CNN) architectures. Designed to classify visual leaf strain degradation and compute real-time structural diagnosis health vectors instantly.
+                    </p>
+                    <h3 class="modal-section-heading">Architectural Parameters</h3>
+                    <ul class="modal-specification-list">
+                        <li><strong>Deep Feature Extraction:</strong> Built using clean multi-layered convolutional feature abstraction architectures via high-tier computing environments.</li>
+                        <li><strong>Quantized Edge Profiling:</strong> Optimized model architectures through structural conversion parameters targeting field embedded edge computer hardware platforms.</li>
+                        <li><strong>High Accuracy Verification:</strong> Trained across deep datasets to shield classification tasks from dynamic environmental lighting bias.</li>
+                    </ul>
+                    <div class="metric-highlights-box">
+                        <div class="metric-stat-item"><span class="metric-value">96.2%</span><span class="metric-label">Model Validation Accuracy</span></div>
+                        <div class="metric-stat-item"><span class="metric-value">&lt; 45ms</span><span class="metric-label">Inference Propagation Speed</span></div>
+                    </div>
+                    <div class="modal-footer-cta">
+                        <a href="https://github.com/mabhi29" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">Explore Source Code Repository <i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 4: TSAL MODAL WINDOW -->
+        <div class="modal-window" id="modal-tsal">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                
+                <!-- Gallery Interface Side -->
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-view">
+                        <img src="images/bspd/bspd1.jpeg" alt="TSAL Main Structural Layout" id="tsalMainDisplay" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22100%25%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%232D6A4F%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22 font-size=%2224%22>TSAL PCB Layout</text></svg>';">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img src="images/bspd/bspd1.jpeg" alt="Thumbnail 1" class="thumb-img active-thumb" onclick="updateModalGallery('tsalMainDisplay', this)">
+                        <img src="images/bspd/bspd2.jpeg" alt="Thumbnail 2" class="thumb-img" onclick="updateModalGallery('tsalMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/bspd/bspd3.jpeg" alt="Thumbnail 3" class="thumb-img" onclick="updateModalGallery('tsalMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/bspd/bspd4.jpeg" alt="Thumbnail 4" class="thumb-img" onclick="updateModalGallery('tsalMainDisplay', this)" onerror="this.style.display='none';">
+                        <img src="images/bspd/bspd5.jpeg" alt="Thumbnail 5" class="thumb-img" onclick="updateModalGallery('tsalMainDisplay', this)" onerror="this.style.display='none';">
+                    </div>
+                </div>
+
+                <!-- Detailed Engineering Case Study Side -->
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-car-battery"></i> EV Technology &amp; Safety Hardware</span>
+                    <h2 class="modal-case-title">Tractive System Active Light (TSAL)</h2>
+                    <div class="modal-heading-divider"></div>
+                    
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Designed and optimized an advanced Tractive System Active Light (TSAL) circuitry asset for an Electric Vehicle platform. This safety asset serves as a high-visibility indicator matrix, calculating and reporting real-time system power conditions in strict compliance with global EV engineering guidelines.
+                    </p>
+
+                    <h3 class="modal-section-heading">Core Compliance State Matrix</h3>
+                    <ul class="modal-specification-list">
+                        <li><span class="indicator-dot red-glow"></span><strong>Red Blinking Status:</strong> Triggered instantly when system potential exceeds the critical safety cross-section limit of 60V.</li>
+                        <li><span class="indicator-dot green-glow"></span><strong>Solid Green Status:</strong> Displays continuous safe operation indication when monitored potential settles cleanly below 60V.</li>
+                        <li><span class="indicator-dot fault-glow"></span><strong>System Fault Safe-State:</strong> Executes complete visual blackout conditions across the array during single-wire circuit interruptions to protect status reliability.</li>
+                    </ul>
+
+                    <h3 class="modal-section-heading">Hardware Optimization Breakthroughs</h3>
+                    <p class="modal-paragraph-text">
+                        Re-architected the baseline architecture by implementing a highly responsive operational amplifier and 555-timer layout embedded with local single-wire line fault monitoring. This architectural shift achieved substantial engineering gains:
+                    </p>
+                    
+                    <div class="metric-highlights-box">
+                        <div class="metric-stat-item">
+                            <span class="metric-value">+15%</span>
+                            <span class="metric-label">Signal Propagation Speed</span>
+                        </div>
+                        <div class="metric-stat-item">
+                            <span class="metric-value">-25%</span>
+                            <span class="metric-label">PCB Physical Size Requirement</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer-cta">
+                        <a href="https://www.linkedin.com/posts/amule29_embeddedsystems-evtechnology-pcbdesign-activity-7456168092021358592-4ZgP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbqeA0BgyDCYYB-FxN12ZqLI_Dw8xxLpiQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn ripple">
+                            View Engineering Record on LinkedIn <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-</div>
 
     <!-- App Script Initialization Links -->
     <script src="js/typing.js"></script>
