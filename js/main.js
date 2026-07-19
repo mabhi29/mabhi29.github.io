@@ -1,264 +1,266 @@
 /**
- * ==========================================================================
- * ABHISHEK MULE PERSONAL PORTFOLIO ARCHITECTURE
- * CORE CONTROLLER CORESTACKS
- * ==========================================================================
- * Updated: Unified Multi-Modal Targeting and Cross-Gallery Synchronization
+ * Comprehensive Dynamic Datastore containing detailed engineering definitions.
+ * This pattern optimizes HTML footprint and handles multi-image parsing.
  */
-
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Dismiss Application Loader Framework
-    const pageLoader = document.getElementById('pageLoader');
-    if (pageLoader) {
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                pageLoader.classList.add('fade-out');
-            }, 300); // Premium visual dwell time
-        });
-        // Fallback for asset delays
-        setTimeout(() => {
-            if (!pageLoader.classList.contains('fade-out')) {
-                pageLoader.classList.add('fade-out');
-            }
-        }, 2000);
-    }
-
-    // 2. Mobile Nav Open/Close Interactions
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const navMenu = document.getElementById('navMenu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    const toggleMobileMenu = () => {
-        hamburgerBtn.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    };
-
-    if (hamburgerBtn && navMenu) {
-        hamburgerBtn.addEventListener('click', toggleMobileMenu);
-    }
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('active')) {
-                toggleMobileMenu();
-            }
-        });
-    });
-
-    // 3. Header Scrolled Tracking & Dynamic Progress Bars
-    const siteHeader = document.getElementById('siteHeader');
-    const progressBar = document.getElementById('progressBar');
-    const backToTop = document.getElementById('backToTop');
-
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-        
-        // Progress Calculation
-        if (documentHeight > 0) {
-            const scrollPercentage = (scrollTop / documentHeight) * 100;
-            if (progressBar) progressBar.style.width = `${scrollPercentage}%`;
-        }
-
-        // Header State Transformations
-        if (siteHeader) {
-            if (scrollTop > 50) {
-                siteHeader.classList.add('scrolled');
-            } else {
-                siteHeader.classList.remove('scrolled');
-            }
-        }
-
-        // Back To Top Display Transitions
-        if (backToTop) {
-            if (scrollTop > 600) {
-                backToTop.style.opacity = '1';
-                backToTop.style.visibility = 'visible';
-            } else {
-                backToTop.style.opacity = '0';
-                backToTop.style.visibility = 'hidden';
-            }
-        }
-
-        // Active Link Highlighting via Scroll Spy
-        let currentSectionId = 'home';
-        const sections = document.querySelectorAll('section');
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 120;
-            if (scrollTop >= sectionTop) {
-                currentSectionId = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // 4. Premium Mouse Tracking Interactive Glow Elements
-    const mouseGlow = document.getElementById('mouseGlow');
-    if (mouseGlow && window.innerWidth > 768) {
-        document.addEventListener('mousemove', (e) => {
-            mouseGlow.style.opacity = '1';
-            mouseGlow.style.left = `${e.clientX}px`;
-            mouseGlow.style.top = `${e.clientY}px`;
-        });
-        document.addEventListener('mouseleave', () => {
-            mouseGlow.style.opacity = '0';
-        });
-    }
-
-    // 5. Intersection Observer Configuration (Scroll Reveal Engine)
-    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .zoom-in');
-    
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Reveal animation only runs once
-            }
-        });
-    }, {
-        root: null,
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px'
-    });
-
-    revealElements.forEach(element => {
-        revealObserver.observe(element);
-    });
-
-    // 6. Premium Button Action Ripple Micro-interactions
-    const rippleButtons = document.querySelectorAll('.ripple');
-    
-    rippleButtons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+const projectDataset = {
+    "rtos-monitor": {
+        title: "Real-Time Environment Monitoring System",
+        category: "Embedded & RTOS",
+        techStack: ["ESP32", "FreeRTOS", "Embedded C", "Wi-Fi", "Web Server", "OLED System"],
+        metrics: [
+            { label: "OS Architecture", val: "FreeRTOS" },
+            { label: "Sensor Array", val: "DHT11 / MQ135" },
+            { label: "Core Execution", val: "Multitasking" }
+        ],
+        descriptionHTML: `
+            <h4><i class="fa-solid fa-circle-info"></i> Project Overview</h4>
+            <p>Developed and deployed a robust, real-time industrial environmental monitoring platform powered by a dual-core ESP32 micro-controller operating under FreeRTOS execution schedules.</p>
             
-            const rippleCircle = document.createElement('span');
-            rippleCircle.classList.add('ripple-effect');
-            rippleCircle.style.left = `${x}px`;
-            rippleCircle.style.top = `${y}px`;
+            <h4><i class="fa-solid fa-microchip"></i> Architectural Implementations</h4>
+            <ul class="modal-bullet-list">
+                <li>Integrated hardware profiles for DHT11 and MQ135 instrumentation arrays, establishing high-accuracy temperature, humidity, and volatile gas calculation tracks.</li>
+                <li>Implemented deterministic task scheduling using FreeRTOS primitives, cleanly distributing core computing time across independent threads for data collection, diagnostic OLED rendering loops, and wireless networking layers.</li>
+                <li>Isolated high-priority measurement interrupts from lower-priority UI and network IO pipelines, preventing system lag or task starvation during web operations.</li>
+            </ul>
+
+            <h4><i class="fa-solid fa-gauge-high"></i> Validation and Debugging</h4>
+            <p>Executed deep cross-functional timing evaluation to track hardware-software handshakes, minimizing resource lock contention issues and optimizing memory heap spaces across intense functional performance diagnostics.</p>
+        `,
+        gallery: [
+            "images/smart-environ.jpeg"
+        ],
+        link: null
+    },
+    "tsal-system": {
+        title: "Tractive System Active Light (TSAL)",
+        category: "EV Safety Hardware",
+        techStack: ["Analog Circuit Design", "PCB Development", "Op-Amp Arrays", "NE555 Timers", "EV Safety Standards"],
+        metrics: [
+            { label: "Response Acceleration", val: "~15% Speedup" },
+            { label: "Footprint Optimization", val: "~25% Shrunk" },
+            { label: "Voltage Threshold", val: "60 VDC" }
+        ],
+        descriptionHTML: `
+            <h4><i class="fa-solid fa-bolt"></i> EV Safety Engineering</h4>
+            <p>Designed and analyzed a physical Tractive System Active Light (TSAL) layout built to deliver absolute vehicle status indications mapped directly to rigorous Electric Vehicle safety compliance benchmarks.</p>
             
-            this.appendChild(rippleCircle);
+            <h4><i class="fa-solid fa-diagram-project"></i> Deterministic System States</h4>
+            <ul class="modal-bullet-list">
+                <li><strong>🔴 Active Hazard State:</strong> Emits a structural blinking visual alert whenever the high-voltage rail registers value transitions exceeding 60V.</li>
+                <li><strong>🟢 Safe Discharge State:</strong> Emits a solid green status visual indicator whenever systemic energy declines below the 60V threshold.</li>
+                <li><strong>⚫ Deep Safe State:</strong> Structural hardware drop to null emissions (no light active) immediately during isolated wire fault anomalies.</li>
+            </ul>
+
+            <h4><i class="fa-solid fa-microchip"></i> Hardware Evolution</h4>
+            <p>Transitioned legacy iterations into an operational single-wire fault architecture merging op-amp comparators with custom NE555 timing loops. This reduced board space allocation requirements while accelerating reaction latency profiles.</p>
+        `,
+        gallery: [
+            "images/projects/tsal/tsal1.jpg",
+            "images/projects/tsal/tsal2.jpg",
+            "images/projects/tsal/tsal3.jpg",
+            "images/projects/tsal/tsal4.jpg",
+            "images/projects/tsal/tsal5.jpg"
+        ],
+        link: "https://www.linkedin.com/posts/amule29_embeddedsystems-evtechnology-pcbdesign-activity-7456168092021358592-4ZgP"
+    },
+    "bspd-device": {
+        title: "Brake System Plausibility Device (BSPD)",
+        category: "Formula Bharat Compliance",
+        techStack: ["Analog Circuit Design", "PCB Design", "Altium Designer", "LTspice Hardware Verification"],
+        metrics: [
+            { label: "PCB Surface Scaling", val: "35% Shrunk" },
+            { label: "Signal Velocity", val: "18% Faster" },
+            { label: "Power Cut Threshold", val: "> 5 kW" }
+        ],
+        descriptionHTML: `
+            <h4><i class="fa-solid fa-trophy"></i> Formula Bharat Structural Safety</h4>
+            <p>Engineered a critical safety shutdown node—a robust two-layer Brake System Plausibility Device (BSPD) tailored to clear all Formula Bharat rulebook inspections. The system monitors driver inputs to verify absolute powertrain control.</p>
+
+            <h4><i class="fa-solid fa-triangle-exclamation"></i> Critical Challenges & Custom Solutions</h4>
+            <ul class="modal-bullet-list">
+                <li><strong>Constraint Layout Challenges:</strong> Faced complex space and track density constraints across standard multi-layer alignment vectors. Optimized paths via layout simulations to retain clear signal paths.</li>
+                <li><strong>Trace Routing Discrepancies:</strong> Addressed potential noise vulnerabilities along critical analog nodes. Applied layout routing rules to ensure trace stability and performance continuity under load tests.</li>
+                <li><strong>Logical Overwrite Execution:</strong> Engineered protection logic that automatically opens the vehicle's master shutdown circuit when hard deceleration triggers concurrent high power demand (>30 bar pressure matched with >5 kW energy levels).</li>
+            </ul>
+
+            <h4><i class="fa-solid fa-wave-square"></i> Hardware Topology Shift</h4>
+            <p>Replaced old logic-gate topologies with discrete operational amplifiers and low R_ds(on) MOSFET control links, improving component count parameters, response speeds, and absolute fail-safe fallback coverage.</p>
+        `,
+        gallery: [
+            "images/projects/bspd/bspd1.jpg",
+            "images/projects/bspd/bspd2.jpg",
+            "images/projects/bspd/bspd3.jpg"
+        ],
+        link: "https://www.linkedin.com/posts/amule29_pcblayout-pcbdesign-altiumdesigner-activity-7239327830646419456-ShMq"
+    },
+    "bms-system": {
+        title: "8-Layer EV Battery Management System",
+        category: "Power Electronics",
+        techStack: ["PCB Design", "Altium Designer", "ISO-SPI Communication", "EV Battery Telemetry"],
+        metrics: [
+            { label: "Substrate Density", val: "8 Layers" },
+            { label: "Architecture", val: "Master/Slave" },
+            { label: "Inter-IC Comms", val: "ISO-SPI" }
+        ],
+        descriptionHTML: `
+            <h4><i class="fa-solid fa-car-battery"></i> Substrate & Communication Topology</h4>
+            <p>Designed and validated an 8-layer high-density BMS slave controller layout, structuring two identical modules per energy pack to provide reliable telemetry transmission across harsh automotive electromagnetic environments.</p>
             
-            setTimeout(() => {
-                rippleCircle.remove();
-            }, 600);
+            <h4><i class="fa-solid fa-shield-halved"></i> Safety & Management Layers</h4>
+            <ul class="modal-bullet-list">
+                <li>Implemented sub-millivolt accuracy differential voltage tracking networks alongside localized thermal monitoring zones.</li>
+                <li>Integrated hardware-driven passive cell balancing systems to equalize pack state-of-charge distributions, extending the battery's operational lifetime.</li>
+                <li>Established high-voltage isolated data links using noise-immune ISO-SPI communication channels, protecting micro-controllers from high-voltage transients.</li>
+            </ul>
+
+            <h4><i class="fa-solid fa-handshake"></i> Multi-Disciplinary Synthesis</h4>
+            <p>Collaborated with electrical, software, and mechanical development tracks to debug embedded firmware tracking, evaluate signal integrity anomalies, and optimize battery pack space constraints.</p>
+        `,
+        gallery: [
+            "images/smart-cam.jpeg"
+        ],
+        link: null
+    },
+    "ecu-system": {
+        title: "STM32 Powertrain Electronic Control Unit",
+        category: "Vehicle Control Systems",
+        techStack: ["STM32 MCU", "Embedded C", "HAL Library", "Sensor Abstraction", "SIL Diagnostics"],
+        metrics: [
+            { label: "Buses Used", val: "CAN / UART / SPI" },
+            { label: "Validation Metric", val: "SIL Completed" },
+            { label: "Platform Core", val: "STM32 / HAL" }
+        ],
+        descriptionHTML: `
+            <h4><i class="fa-solid fa-gears"></i> Central Intelligence Node</h4>
+            <p>Developed high-reliability application firmware target configurations matching an advanced STM32 vehicle Electronic Control Unit (ECU) designed to control core energy delivery loops.</p>
+            
+            <h4><i class="fa-solid fa-network-wired"></i> Interface Execution Layer</h4>
+            <ul class="modal-bullet-list">
+                <li>Integrated data streaming pipelines for high-rate IMUs, wheel encoders, brake transducers, and electronic steering sensors.</li>
+                <li>Structured robust data frame parsing over automotive network links, including CAN bus architectures, high-speed SPI channels, and auxiliary UART nodes.</li>
+                <li>Built automated hardware fault detection mechanisms capable of tracking out-of-bounds metrics and handling diagnostic fail-safe recovery processes.</li>
+            </ul>
+
+            <h4><i class="fa-solid fa-computer"></i> Software-in-the-Loop Validation</h4>
+            <p>Tested internal state-machine control logic using Software-in-the-Loop simulation pipelines, confirming algorithm convergence before physical integration phases.</p>
+        `,
+        gallery: [
+            "images/profile.jpg"
+        ],
+        link: null
+    }
+};
+
+// DOM Elements Core Hook Setup
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("projectModal");
+    const modalContent = document.getElementById("modalContentTarget");
+    const closeBtn = document.getElementById("closeModal");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    // Modal Interaction Functions
+    function openProjectModal(projectId) {
+        const data = projectDataset[projectId];
+        if (!data) return;
+
+        // Populate the modal markup template
+        let metricsMarkup = data.metrics.map(m => `
+            <div class="metric-card">
+                <span class="metric-val">${m.val}</span>
+                <span class="metric-lbl">${m.lbl}</span>
+            </div>
+        `).join('');
+
+        let techMarkup = data.techStack.map(t => `<span>${t}</span>`).join('');
+        
+        // Generate gallery sections if images are available
+        let galleryMarkup = "";
+        if (data.gallery && data.gallery.length > 0) {
+            let thumbs = data.gallery.map((img, idx) => `
+                <img src="${img}" class="gallery-thumb ${idx === 0 ? 'active' : ''}" data-idx="${idx}" alt="Thumbnail View">
+            `).join('');
+
+            galleryMarkup = `
+                <div class="modal-gallery">
+                    <h4><i class="fa-solid fa-images"></i> Engineering Gallery</h4>
+                    <div class="gallery-main-frame">
+                        <img src="${data.gallery[0]}" id="mainGalleryViewer" alt="Active Blueprint View">
+                    </div>
+                    <div class="gallery-strip">
+                        ${data.gallery.length > 1 ? thumbs : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        let linkMarkup = data.link ? `
+            <div class="modal-action-row">
+                <a href="${data.link}" target="_blank" class="btn-modal-link">
+                    <i class="fa-brands fa-linkedin"></i> View Project Publication
+                </a>
+            </div>
+        ` : '';
+
+        modalContent.innerHTML = `
+            <div class="modal-header">
+                <span class="section-tag">${data.category}</span>
+                <h2>${data.title}</h2>
+                <div class="modal-tech-stack">
+                    ${techMarkup}
+                </div>
+            </div>
+            <div class="metrics-row">
+                ${metricsMarkup}
+            </div>
+            <div class="modal-body-content">
+                ${data.descriptionHTML}
+            </div>
+            ${galleryMarkup}
+            ${linkMarkup}
+        `;
+
+        // Attach gallery click event listeners
+        if (data.gallery && data.gallery.length > 1) {
+            const mainViewer = document.getElementById("mainGalleryViewer");
+            const thumbs = document.querySelectorAll(".gallery-thumb");
+            thumbs.forEach(thumb => {
+                thumb.addEventListener("click", (e) => {
+                    thumbs.forEach(t => t.classList.remove("active"));
+                    e.target.classList.add("active");
+                    mainViewer.src = data.gallery[e.target.dataset.idx];
+                });
+            });
+        }
+
+        // Show modal and handle document overflow settings
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeProjectModal() {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    // Attach Event Handlers
+    projectCards.forEach(card => {
+        card.addEventListener("click", () => {
+            const id = card.getAttribute("data-project-id");
+            openProjectModal(id);
         });
     });
 
-    // 7. Micro-Parallax System for Hero Profiler Setup
-    const heroImageWrapper = document.querySelector('.hero-image-wrapper');
-    if (heroImageWrapper && window.innerWidth > 1024) {
-        document.addEventListener('mousemove', (e) => {
-            const axisX = (window.innerWidth / 2 - e.clientX) / 45;
-            const axisY = (window.innerHeight / 2 - e.clientY) / 45;
-            heroImageWrapper.style.transform = `rotateY(${axisX}deg) rotateX(${axisY}deg)`;
-        });
-    }
-
-    // ==========================================================================
-    // ABHISHEK MULE INTERACTIVE CASE STUDY MODAL MANAGEMENT ENGINE
-    // ==========================================================================
-    const modalOverlay = document.getElementById('modalOverlay');
-    const triggerButtons = document.querySelectorAll('[data-modal-open]');
-
-    /**
-     * Expose Opening Operation Globally to ensure clean modular control
-     */
-    window.openModalWindow = (targetId) => {
-        if (!modalOverlay) return;
-
-        // Step A: Close/Hide any previously visible active modal views first
-        const activeModals = modalOverlay.querySelectorAll('.modal-window.active');
-        activeModals.forEach(modal => modal.classList.remove('active'));
-
-        // Step B: Extract and target the specific workspace container
-        const targetModal = document.getElementById(targetId);
-        if (targetModal) {
-            targetModal.classList.add('active');
-            modalOverlay.classList.add('modal-active');
-            document.body.style.overflow = 'hidden'; // Halt parent application scroll loop
-        }
-    };
-
-    /**
-     * Expose Closing Operation Globally to prevent inline 'onclick' ReferenceErrors
-     */
-    window.closeModalWindow = () => {
-        if (!modalOverlay) return;
-        
-        modalOverlay.classList.remove('modal-active');
-        
-        // Remove active state layers from all nested windows cleanly
-        const allModals = modalOverlay.querySelectorAll('.modal-window');
-        allModals.forEach(modal => modal.classList.remove('active'));
-        
-        document.body.style.overflow = ''; // Restore layout scroll defaults
-    };
-
-    // Bind event workflows to modern HTML structural data targets
-    triggerButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetModalId = btn.getAttribute('data-modal-open');
-            window.openModalWindow(targetModalId);
-        });
-    });
-
-    // Background Interceptor: Close if user clicks out inside the dark blur bounds
-    if (modalOverlay) {
-        modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) {
-                window.closeModalWindow();
-            }
-        });
-        
-        // System Keyboard Listener: Close active modules when tapping 'Escape'
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modalOverlay.classList.contains('modal-active')) {
-                window.closeModalWindow();
-            }
-        });
-    }
-
-    // ==========================================================================
-    // UNIVERSAL HIGH-FIDELITY CASE STUDY IMAGE INTERFACE SYSTEM
-    // ==========================================================================
-    /**
-     * Dynamically swaps viewing assets within any modular canvas frame
-     * @param {string} displayId - The unique ID target of the principal view display element
-     * @param {HTMLElement} thumbnailElement - The DOM instance reference of the clicked control thumbnail
-     */
-    window.updateModalGallery = function(displayId, thumbnailElement) {
-        const mainDisplay = document.getElementById(displayId);
-        if (!mainDisplay || !thumbnailElement) return;
-
-        // Apply visual transition cushion
-        mainDisplay.style.opacity = '0.25';
-        
-        setTimeout(() => {
-            mainDisplay.src = thumbnailElement.src;
-            mainDisplay.alt = thumbnailElement.alt;
-            mainDisplay.style.opacity = '1';
-        }, 130);
-
-        // Discard active tag rings inside the context module gallery
-        const parentGallery = thumbnailElement.parentElement;
-        if (parentGallery) {
-            const siblingThumbs = parentGallery.querySelectorAll('.thumb-img');
-            siblingThumbs.forEach(thumb => thumb.classList.remove('active-thumb'));
-        }
-        
-        // Affix premium visual highlight frame to the active control asset
-        thumbnailElement.classList.add('active-thumb');
-    };
+    closeBtn.addEventListener("click", closeProjectModal);
     
+    // Close modal if user clicks the outer layout mask
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeProjectModal();
+    });
+
+    // Close modal on escape keypress events
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+            closeProjectModal();
+        }
+    });
 });
