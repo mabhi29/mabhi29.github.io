@@ -1,4 +1,7 @@
-/* Core Styling Declarations & Custom Variables */
+/* ==========================================================================
+   1. CORE STYLING DECLARATIONS & CUSTOM VARIABLES
+   ========================================================================== */
+
 :root {
     --bg-main: #0a0a0c;
     --bg-surface: #121216;
@@ -6,9 +9,11 @@
     --text-primary: #f3f4f6;
     --text-secondary: #9ca3af;
     --accent-color: #00ffcc;
+    --accent-green: #00ffcc; /* Added fallback for responsive navbar triggers */
     --accent-gradient: linear-gradient(135deg, #00ffcc 0%, #0077ff 100%);
     --card-border: rgba(255, 255, 255, 0.05);
     --card-border-hover: rgba(0, 255, 204, 0.3);
+    --border-subtle: rgba(255, 255, 255, 0.08);
     --transition-standard: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -632,4 +637,321 @@ body {
     background: #004182;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(10, 102, 194, 0.3);
+}
+
+
+/* ==========================================================================
+   2. KEYFRAME MATRIX & SCROLL-TRIGGER ANIMATIONS
+   ========================================================================== */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+    40% { transform: translate(-50%, -10px); }
+    60% { transform: translate(-50%, -5px); }
+}
+
+@keyframes blobMorph {
+    0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: translate(0, 0) scale(1); }
+    33% { border-radius: 70% 30% 52% 48% / 60% 40% 60% 40%; transform: translate(40px, -50px) scale(1.1); }
+    66% { border-radius: 28% 72% 35% 65% / 40% 60% 40% 60%; transform: translate(-20px, 30px) scale(0.95); }
+    100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: translate(0, 0) scale(1); }
+}
+
+/* Hero Fluid Blobs */
+.animated-blobs-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.blob {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(216,243,220,0.25) 0%, rgba(123,196,127,0.15) 100%);
+    filter: blur(40px);
+    animation: blobMorph 12s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+    width: 500px;
+    height: 500px;
+    top: -10%;
+    right: -10%;
+}
+
+.blob-2 {
+    width: 400px;
+    height: 400px;
+    bottom: 5%;
+    left: -5%;
+    animation-duration: 16s;
+}
+
+/* Float Animation Profile Wrapper */
+.image-border-glow {
+    animation: premiumFloat 6s ease-in-out infinite;
+}
+
+@keyframes premiumFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Scroll Reveal Engine States */
+.reveal-up, .reveal-left, .reveal-right, .zoom-in {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.reveal-up { transform: translateY(50px); }
+.reveal-left { transform: translateX(-50px); }
+.reveal-right { transform: translateX(50px); }
+.zoom-in { transform: scale(0.92); }
+
+.reveal-up.active, .reveal-left.active, .reveal-right.active, .zoom-in.active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Native Button Ripple Utilities */
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(0);
+    animation: rippleAnim 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleAnim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+
+/* ==========================================================================
+   3. RESPONSIVE GRID CONFIGURATIONS (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Large Screen Adjustments (1200px) */
+@media (max-width: 1200px) {
+    .container, .nav-container {
+        padding: 0 32px;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .about-grid {
+        gap: 50px;
+    }
+}
+
+/* Laptop Adjustments (1024px) */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+    .hero-profile-img {
+        width: 290px;
+        height: 330px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .about-image-side {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .projects-grid {
+        gap: 30px;
+    }
+}
+
+/* Intermediate Modal Layout Adaptations (992px) */
+@media (max-width: 992px) {
+    .modal-body-grid {
+        grid-template-columns: 1fr;
+    }
+    .modal-gallery-side {
+        border-right: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 30px 24px;
+    }
+    .gallery-main-view {
+        height: 280px;
+    }
+    .modal-info-side {
+        padding: 36px 24px;
+    }
+}
+
+/* Tablet Device Framework (768px) */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 90px 0;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    /* Mobile Menu Execution */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        box-shadow: -10px 0 40px rgba(0,0,0,0.05);
+        z-index: 1001;
+        padding: 120px 40px 40px 40px;
+        transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-menu.active {
+        right: 0;
+    }
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 28px;
+    }
+    .nav-link {
+        font-size: 1.2rem;
+        display: block;
+    }
+    
+    /* Active Toggle Icon Shapes */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: var(--accent-green);
+    }
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--accent-green);
+    }
+
+    .nav-actions {
+        margin-right: 45px;
+    }
+
+    /* Layout Collapses */
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .hero-image-wrapper {
+        order: -1;
+    }
+    
+    .about-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    
+    .timeline-line {
+        left: 16px;
+    }
+    .timeline-item {
+        padding-left: 50px;
+    }
+    .timeline-dot {
+        left: 8px;
+    }
+    
+    .contact-card {
+        padding: 60px 24px;
+    }
+    .contact-main-heading {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile Fluid Column Scaling (576px) */
+@media (max-width: 576px) {
+    .modal-case-title {
+        font-size: 1.75rem;
+    }
+    .metric-highlights-box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Compact Mobile Framework (480px) */
+@media (max-width: 480px) {
+    .container, .nav-container {
+        padding: 0 20px;
+    }
+    .hero-title {
+        font-size: 2.3rem;
+    }
+    .typing-wrapper {
+        font-size: 1.1rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-actions .btn {
+        display: none;
+    }
+    .nav-actions {
+        margin-right: 25px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .contact-main-heading {
+        font-size: 1.75rem;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }

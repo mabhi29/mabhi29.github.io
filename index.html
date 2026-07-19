@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded & EV Systems Portfolio</title>
-    <!-- Icon Fonts -->
+    <meta name="description" content="Abhishek Mule - Electronics & Telecommunication Engineer, Embedded Systems & IoT Developer Portfolio.">
+    <title>Abhishek Mule | Premium Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Theme Style Sheets -->
     <link rel="stylesheet" href="css/style.css">
@@ -14,150 +19,585 @@
 </head>
 <body>
 
-    <!-- Navigation Header -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">AMULE<span>.Tech</span></a>
-            <nav class="nav-menu">
-                <a href="#hero" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link active">Projects</a>
-                <a href="assets/resume.pdf" class="nav-btn" target="_blank">Resume <i class="fa-solid fa-arrow-down-heading"></i></a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section Showcase -->
-    <section id="hero" class="hero-section" style="background-image: linear-gradient(rgba(10, 10, 12, 0.85), rgba(10, 10, 12, 0.95)), url('images/hero-bg.jpg');">
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="hero-tag">Hardware & Embedded Firmware Engineer</span>
-                <h1>Designing Next-Gen <br><span class="text-gradient">Electric Vehicle Systems</span></h1>
-                <p>Specializing in high-reliability PCB design, real-time safety critical architectures, and robust hardware validation engineering.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">Explore Systems</a>
-                    <a href="#about" class="btn btn-secondary">Technical Specs</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="section-container">
-            <div class="about-grid">
-                <div class="about-image-wrapper">
-                    <img src="images/about.jpeg" alt="Engineering Workstation" class="about-img">
-                </div>
-                <div class="about-content">
-                    <span class="section-tag">Background</span>
-                    <h2>Bridging Abstract Logic With <br><span class="text-gradient">Physical Hardware</span></h2>
-                    <p>I develop robust electronics for electric powertrains and telemetry platforms. From multi-layer high-speed PCB layouts to firmware operating on bare-metal and RTOS structures, my designs prioritize safety compliance, signal integrity, and performance speed.</p>
-                    <div class="tech-badges">
-                        <span><i class="fa-solid fa-microchip"></i> Altium Designer</span>
-                        <span><i class="fa-solid fa-code"></i> FreeRTOS</span>
-                        <span><i class="fa-solid fa-bolt"></i> Analog Design</span>
-                        <span><i class="fa-solid fa-wave-square"></i> LTspice</span>
-                        <span><i class="fa-solid fa-network-wired"></i> CAN/ISO-SPI</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dynamic Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Portfolio Showcase</span>
-                <h2>Engineered Engineering Systems</h2>
-                <p>Click on "View Details" to inspect comprehensive schematic logic, validation challenges, metrics, and functional galleries.</p>
-            </div>
-
-            <!-- Grid container targeting your project configuration cards -->
-            <div class="projects-grid">
-                
-                <!-- Project 1 Card -->
-                <div class="project-card" data-project-id="rtos-monitor">
-                    <div class="project-card-image">
-                        <img src="images/smart-environ.jpeg" alt="Real-time Environment Monitoring System">
-                        <span class="project-category">Embedded & RTOS</span>
-                    </div>
-                    <div class="project-card-body">
-                        <h3>ESP32 FreeRTOS Monitoring System</h3>
-                        <p>A multi-tasking data acquisition platform utilizing FreeRTOS to manage concurrent sensor parsing, web stack communication, and localized diagnostic streams.</p>
-                        <button class="btn-view-details">View Details <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                </div>
-
-                <!-- Project 2 Card -->
-                <div class="project-card" data-project-id="tsal-system">
-                    <div class="project-card-image">
-                        <img src="images/projects/tsal/tsal1.jpg" alt="Tractive System Active Light">
-                        <span class="project-category">EV Safety Hardware</span>
-                    </div>
-                    <div class="project-card-body">
-                        <h3>Tractive System Active Light (TSAL)</h3>
-                        <p>An analog safety indicator monitoring EV high-voltage states, executing structural blinking alerts and automatic fault isolation logic.</p>
-                        <button class="btn-view-details">View Details <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                </div>
-
-                <!-- Project 3 Card -->
-                <div class="project-card" data-project-id="bspd-device">
-                    <div class="project-card-image">
-                        <img src="images/projects/bspd/bspd1.jpg" alt="Brake System Plausibility Device">
-                        <span class="project-category">Formula Bharat Compliance</span>
-                    </div>
-                    <div class="project-card-body">
-                        <h3>Brake System Plausibility Device (BSPD)</h3>
-                        <p>A mission-critical Formula Bharat electronic safety layout utilizing Altium to evaluate driver throttle and hard brake logic synchronization.</p>
-                        <button class="btn-view-details">View Details <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                </div>
-
-                <!-- Project 4 Card -->
-                <div class="project-card" data-project-id="bms-system">
-                    <div class="project-card-image">
-                        <img src="images/smart-cam.jpeg" alt="Battery Management System">
-                        <span class="project-category">Power Electronics</span>
-                    </div>
-                    <div class="project-card-body">
-                        <h3>8-Layer EV Battery Management System</h3>
-                        <p>An enterprise multi-layer balance architecture managing modular cell telemetry using ISO-SPI communication isolated daisy-chains.</p>
-                        <button class="btn-view-details">View Details <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                </div>
-
-                <!-- Project 5 Card -->
-                <div class="project-card" data-project-id="ecu-system">
-                    <div class="project-card-image">
-                        <img src="images/profile.jpg" alt="Electronic Control Unit">
-                        <span class="project-category">Vehicle Control Systems</span>
-                    </div>
-                    <div class="project-card-body">
-                        <h3>STM32 Powertrain Electronic Control Unit</h3>
-                        <p>Central computing node running firmware targeting vehicle sensor abstraction layer loops, CAN networking, and dynamic logic validation.</p>
-                        <button class="btn-view-details">View Details <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Advanced Overlay Modal Shell (Dynamically Hydrated via main.js) -->
-    <div id="projectModal" class="modal-overlay">
-        <div class="modal-wrapper">
-            <button class="modal-close-btn" id="closeModal"><i class="fa-solid fa-xmark"></i></button>
-            <div class="modal-scroll-container" id="modalContentTarget">
-                <!-- Javascript will inject data inside this container block -->
-            </div>
+    <!-- Premium Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <span class="loader-text">AM</span>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/typing.js"></script>
-</body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Mouse Glow Effect -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="site-header" id="siteHeader">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-dot"></span>Abhishek.<span>Mule</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="assets/resume.pdf" download class="btn btn-secondary nav-cta-btn">Resume <i class="fa-solid fa-arrow-down-long"></i></a>
+                <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle Navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section" style="background-image: url('images/hero-bg.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="animated-blobs-container">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+            </div>
+            <div class="container hero-container">
+                <div class="hero-content reveal-left">
+                    <span class="hero-badge">Available for Innovative Roles</span>
+                    <h1 class="hero-title">Building Intelligent Embedded Systems For A Smarter Tomorrow</h1>
+                    <div class="typing-wrapper">
+                        <span class="typing-static">I am a </span>
+                        <span class="typing-text" id="typewriter"></span>
+                    </div>
+                    <p class="hero-description">
+                        I transform innovative ideas into practical embedded systems and intelligent solutions through electronics, software, and modern technologies.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary ripple">Explore My Work <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <a href="assets/resume.pdf" download class="btn btn-secondary ripple">Download Resume <i class="fa-solid fa-download"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper reveal-right">
+                    <div class="image-border-glow">
+                        <img src="images/profile.jpg" alt="Abhishek Mule Profile" class="hero-profile-img">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down-indicator">
+                <a href="#about"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">Discovery</span>
+                    <h2 class="section-title">Who I Am</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image-side reveal-left">
+                        <div class="about-image-card">
+                            <img src="images/about.jpeg" alt="Abhishek working on core systems" class="about-img">
+                        </div>
+                    </div>
+                    <div class="about-text-side reveal-right">
+                        <h3 class="about-heading">Fusing Hardware Precision with Intelligent Software</h3>
+                        <p class="about-paragraph">
+                            As an Electronics and Telecommunication Engineering student, I thrive at the convergence of hardware architectures and cutting-edge software paradigms. My passion lies in engineering robust embedded solutions, prototyping automated IoT architectures, and exploring machine learning deployments at the edge.
+                        </p>
+                        <p class="about-paragraph">
+                            Driven by curiosity, I approach technical hurdles systematically. From blueprinting complex multilayer PCBs to testing modern software stacks, I focus on building resilient, scalable, and highly optimized technical designs.
+                        </p>
+                        <div class="about-cards-grid">
+                            <div class="about-info-card interactive-card">
+                                <div class="card-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <h4>B.Tech Electronics &amp; Telecommunication</h4>
+                                <p>Pune, India</p>
+                            </div>
+                            <div class="about-info-card interactive-card">
+                                <div class="card-icon-box"><i class="fa-solid fa-microchip"></i></div>
+                                <h4>Interest Area</h4>
+                                <p>Embedded Systems</p>
+                            </div>
+                            <div class="about-info-card interactive-card">
+                                <div class="card-icon-box"><i class="fa-solid fa-bolt"></i></div>
+                                <h4>Core Experience</h4>
+                                <p>IoT • AI • Hardware</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">Academic Milestones</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content interactive-card">
+                            <span class="timeline-date">2023 – 2027</span>
+                            <h3 class="timeline-degree">Bachelor of Technology</h3>
+                            <h4 class="timeline-major">Electronics &amp; Telecommunication Engineering</h4>
+                            <p class="timeline-inst">Pimpri Chinchwad College of Engineering (PCCoE)</p>
+                            <p class="timeline-details">Building strong conceptual frameworks in advanced embedded architectures, network design, and digital signal synthesis.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content interactive-card">
+                            <span class="timeline-date">2025 – 2027</span>
+                            <h3 class="timeline-degree">Honors Degree</h3>
+                            <h4 class="timeline-major">Semiconductor Technology</h4>
+                            <p class="timeline-inst">Pimpri Chinchwad College of Engineering (PCCoE)</p>
+                            <p class="timeline-details">Specialized advanced pathway focused deeply on modern VLSI design principles, microfabrication methods, and silicon validation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">Portfolio Showcases</span>
+                    <h2 class="section-title">Things I've Built</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="projects-grid">
+                    
+                    <!-- Project Card 1: Real-time Environment Monitoring System -->
+                    <article class="project-card reveal-up interactive-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder-img graphic-1">
+                                <i class="fa-solid fa-cloud-sun-rain"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Real-time Environment Monitoring System</h3>
+                            <p class="project-desc">A micro-architectural environment tracking system leveraging FreeRTOS multitasking to continuously monitor atmosphere parameters. Acquires climate vectors from integrated sensor arrays while broadcasting wireless data to a local web server simultaneously.</p>
+                            <div class="project-badges">
+                                <span class="badge">ESP32</span>
+                                <span class="badge">FreeRTOS</span>
+                                <span class="badge">Embedded C</span>
+                                <span class="badge">Wi-Fi</span>
+                                <span class="badge">Web Server</span>
+                            </div>
+                            <button class="btn-view-details" data-modal-open="modal-environment">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2: Tractive System Active Light -->
+                    <article class="project-card reveal-up interactive-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder-img graphic-2">
+                                <i class="fa-solid fa-bolt-lightning"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Tractive System Active Light (TSAL)</h3>
+                            <p class="project-desc">A specialized high-voltage vehicle safety circuit engineered to indicate traction stack states matching EV structural standard rules. Built via analog operations with single wire fault configurations to drop footprint area and boost response delay loops.</p>
+                            <div class="project-badges">
+                                <span class="badge">Analog Circuit Design</span>
+                                <span class="badge">PCB Development</span>
+                                <span class="badge">555 Timer</span>
+                                <span class="badge">EV Safety Standards</span>
+                            </div>
+                            <button class="btn-view-details" data-modal-open="modal-tsal">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3: Brake System Plausibility Device -->
+                    <article class="project-card reveal-up interactive-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder-img graphic-3">
+                                <i class="fa-solid fa-car-burst"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Brake System Plausibility Device (BSPD)</h3>
+                            <p class="project-desc">A dual-layer race-safety board built with Altium Designer to satisfy strict Formula Bharat safety protocols. Monitors simultaneous brake pressure and accelerator vectors to trigger immediate motor power cutoffs during critical fault events.</p>
+                            <div class="project-badges">
+                                <span class="badge">Altium Designer</span>
+                                <span class="badge">LTspice</span>
+                                <span class="badge">Analog Design</span>
+                                <span class="badge">Formula Bharat Compliance</span>
+                            </div>
+                            <button class="btn-view-details" data-modal-open="modal-bspd">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 4: Battery Management System -->
+                    <article class="project-card reveal-up interactive-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder-img graphic-4">
+                                <i class="fa-solid fa-battery-three-quarters"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Battery Management System (BMS Slave)</h3>
+                            <p class="project-desc">An advanced 8-layer automotive electronic system engineered for precision EV pack monitoring. Deploys isolated cell diagnostics, passive terminal balancing metrics, and high-frequency communication links using an isolated SPI topology.</p>
+                            <div class="project-badges">
+                                <span class="badge">PCB Design</span>
+                                <span class="badge">Altium</span>
+                                <span class="badge">ISO-SPI</span>
+                                <span class="badge">EV Battery Systems</span>
+                            </div>
+                            <button class="btn-view-details" data-modal-open="modal-bms">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 5: Electronic Control Unit -->
+                    <article class="project-card reveal-up interactive-card">
+                        <div class="project-img-wrapper">
+                            <div class="project-placeholder-img graphic-1">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Electronic Control Unit (ECU)</h3>
+                            <p class="project-desc">High-performance STM32 embedded firmware execution featuring a robust multi-bus architecture integrating critical vehicle tracking modules. Validated systematically via detailed Software-in-the-Loop simulation testing strategies.</p>
+                            <div class="project-badges">
+                                <span class="badge">STM32</span>
+                                <span class="badge">Embedded C</span>
+                                <span class="badge">HAL Library</span>
+                                <span class="badge">CAN Bus</span>
+                                <span class="badge">SIL Testing</span>
+                            </div>
+                            <button class="btn-view-details" data-modal-open="modal-ecu">View Details <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-subtitle">Technical Competence</span>
+                    <h2 class="section-title">Skills &amp; Toolkit</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="skills-wrapper">
+                    <!-- Programming Group -->
+                    <div class="skills-category reveal-up interactive-card">
+                        <h3 class="category-title"><i class="fa-solid fa-code"></i> Programming</h3>
+                        <div class="chips-container">
+                            <div class="skill-chip">C</div>
+                            <div class="skill-chip">C++</div>
+                            <div class="skill-chip">Python</div>
+                            <div class="skill-chip">Embedded C</div>
+                        </div>
+                    </div>
+
+                    <!-- Electronics Group -->
+                    <div class="skills-category reveal-up interactive-card">
+                        <h3 class="category-title"><i class="fa-solid fa-microchip"></i> Electronics &amp; Protocols</h3>
+                        <div class="chips-container">
+                            <div class="skill-chip">STM32</div>
+                            <div class="skill-chip">ESP32</div>
+                            <div class="skill-chip">Arduino</div>
+                            <div class="skill-chip">PCB Design</div>
+                            <div class="skill-chip">CAN</div>
+                            <div class="skill-chip">UART</div>
+                            <div class="skill-chip">SPI</div>
+                            <div class="skill-chip">I2C</div>
+                            <div class="skill-chip">FreeRTOS</div>
+                        </div>
+                    </div>
+
+                    <!-- Software Group -->
+                    <div class="skills-category reveal-up interactive-card">
+                        <h3 class="category-title"><i class="fa-solid fa-laptop-code"></i> Software &amp; Frameworks</h3>
+                        <div class="chips-container">
+                            <div class="skill-chip">Altium Designer</div>
+                            <div class="skill-chip">MATLAB</div>
+                            <div class="skill-chip">Git</div>
+                            <div class="skill-chip">LTSpice</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="contact-card reveal-up">
+                    <div class="contact-cta-wrapper">
+                        <span class="contact-badge">Let's Connect</span>
+                        <h2 class="contact-main-heading">Let's Build Something Amazing Together</h2>
+                        <p class="contact-subtext">Seeking challenging initiatives or professional engineering collaboration? Reach out directly.</p>
+                        <a href="mailto:muleabhishek9127@gmail.com" class="btn btn-primary contact-btn ripple">Email Me <i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <div class="contact-socials-wrapper">
+                        <div class="social-divider"></div>
+                        <div class="social-links-container">
+                            <a href="https://github.com/mabhi29" target="_blank" rel="noopener noreferrer" class="social-circle-link" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/amule29" target="_blank" rel="noopener noreferrer" class="social-circle-link" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/abhishekmule29/" target="_blank" rel="noopener noreferrer" class="social-circle-link" aria-label="Instagram Profile">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="footer-copy">Designed &amp; Developed by <strong>Abhishek Mule</strong> &copy; 2026</p>
+            <a href="#home" class="back-to-top-btn" id="backToTop" aria-label="Scroll Back to Top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         PREMIUM PROJECT CASE STUDY OVERLAY MANAGEMENT SYSTEM (MODALS)
+         ========================================================================== -->
+    <div class="modal-overlay" id="modalOverlay">
+        
+        <!-- PROJECT 1: ENVIRONMENT MONITORING SYSTEM MODAL -->
+        <div class="modal-window" id="modal-environment">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-view">
+                        <div class="project-placeholder-img graphic-1" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
+                            <i class="fa-solid fa-cloud-sun-rain" style="font-size: 80px; color: var(--primary-color, #38bdf8);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-microchip"></i> Multitasking RTOS Application</span>
+                    <h2 class="modal-case-title">Real-time Environment Monitoring System using ESP &amp; FreeRTOS</h2>
+                    <div class="modal-heading-divider"></div>
+                    
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Developed a highly efficient, real-time environmental data acquisition and logging framework using an ESP32 micro-controller and FreeRTOS. The implementation leverages real-time preemptive scheduling to execute deterministic multi-sensor measurements and maintain high-reliability communications simultaneously.
+                    </p>
+                    
+                    <h3 class="modal-section-heading">Technical Stack &amp; Tools</h3>
+                    <div class="project-badges" style="margin-bottom: 20px;">
+                        <span class="badge">ESP32</span>
+                        <span class="badge">FreeRTOS</span>
+                        <span class="badge">Embedded C</span>
+                        <span class="badge">Wi-Fi</span>
+                        <span class="badge">Web Server</span>
+                        <span class="badge">DHT11</span>
+                        <span class="badge">MQ135</span>
+                        <span class="badge">OLED Display</span>
+                    </div>
+
+                    <h3 class="modal-section-heading">Key Engineering Implementations</h3>
+                    <ul class="modal-specification-list">
+                        <li><strong>Sensor Array Integration:</strong> Directly integrated physical DHT11 and MQ135 sensor components to log atmospheric ambient temperature, relative humidity metrics, and air quality ratings.</li>
+                        <li><strong>FreeRTOS Multitasking Architecture:</strong> Designed concurrent deterministic tasks to manage independent sensor telemetry loops, high-frequency OLED graphical display updates, and standard asynchronous Wi-Fi web server data serving cycles simultaneously.</li>
+                        <li><strong>Validation &amp; Debugging:</strong> Systematically verified sensor-to-bus peripheral connectivity interfaces and confirmed strict timing constraints via comprehensive functional integration test coverage.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 2: TRACTIVE SYSTEM ACTIVE LIGHT MODAL -->
+        <div class="modal-window" id="modal-tsal">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-view">
+                        <div class="project-placeholder-img graphic-2" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
+                            <i class="fa-solid fa-bolt-lightning" style="font-size: 80px; color: #fbbf24;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-car-battery"></i> EV Safety Systems</span>
+                    <h2 class="modal-case-title">Tractive System Active Light (TSAL)</h2>
+                    <div class="modal-heading-divider"></div>
+                    
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Designed, optimized, and built a custom Tractive System Active Light system tailored for Electric Vehicles. This hardware architecture delivers deep immersion into advanced discrete analog circuit topologies and precise PCB development constraints to explicitly track and indicate live battery accumulator high-voltage states.
+                    </p>
+
+                    <h3 class="modal-section-heading">State Indication Logic Breakdown</h3>
+                    <ul class="modal-specification-list">
+                        <li>🔴 <strong>Active Hazard Notification:</strong> Outputs a highly visible red blinking light state whenever live bus potentials cross beyond the critical <span style="color: #ef4444; font-weight:600;">60V</span> envelope.</li>
+                        <li>🟢 <strong>Safe Status Configuration:</strong> Actuates a solid green indicator lamp output whenever voltage drops safely beneath the <span style="color: #22c55e; font-weight:600;">60V</span> threshold limit.</li>
+                        <li>⚫ <strong>Single Wire Fault Safe-State:</strong> Automatically drops all visual indicators to a complete dark zero-power state during system failures to isolate hazardous false-positives.</li>
+                    </ul>
+
+                    <h3 class="modal-section-heading">Architecture Redesign &amp; Optimization Metrics</h3>
+                    <p class="modal-paragraph-text">
+                        Transitioned the classic safety architecture into an optimized Op-Amp comparator plus 555-Timer oscillation topology embedded with single-wire fault protection loops. This architectural design choice achieved key efficiency goals:
+                    </p>
+                    <div class="metric-highlights-box">
+                        <div class="metric-stat-item"><span class="metric-value">~15%</span><span class="metric-label">Faster Response Speed</span></div>
+                        <div class="metric-stat-item"><span class="metric-value">~25%</span><span class="metric-label">PCB Size Reduction</span></div>
+                    </div>
+
+                    <div class="modal-footer-cta" style="margin-top: 20px;">
+                        <a href="https://www.linkedin.com/posts/amule29_embeddedsystems-evtechnology-pcbdesign-activity-7456168092021358592-4ZgP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbqeA0BgyDCYYB-FxN12ZqLI_Dw8xxLpiQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">View Project Post on LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 3: BRAKE SYSTEM PLAUSIBILITY DEVICE MODAL -->
+        <div class="modal-window" id="modal-bspd">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-view">
+                        <div class="project-placeholder-img graphic-3" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
+                            <i class="fa-solid fa-car-burst" style="font-size: 80px; color: #f43f5e;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-trophy"></i> Formula Bharat Compliance</span>
+                    <h2 class="modal-case-title">Brake System Plausibility Device (BSPD)</h2>
+                    <div class="modal-heading-divider"></div>
+                    
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Designed, assembled, and validated a robust two-layer Brake System Plausibility Device (BSPD) circuit board using Altium Designer for Team Kratos Racing Electric India. The safety asset continuously monitors concurrent pedal telemetry errors to preserve cockpit mechanical integrity.
+                    </p>
+
+                    <h3 class="modal-section-heading">Functional &amp; Regulatory Specifications</h3>
+                    <ul class="modal-specification-list">
+                        <li><strong>Automatic Safety Cutoff:</strong> Opens the master vehicle shutdown path automatically if motor power yields over 5 kW simultaneously while hydraulic brake lines pass 30 bar.</li>
+                        <li><strong>Formula Bharat Rulebook Compliance:</strong> Features direct internal current distribution from the Low Voltage Master Switch (LVMS) with minimal auxiliary hardware line splits.</li>
+                        <li><strong>Sensor Signal Integration:</strong> Deploys specialized configurations to capture differential inputs from physical analog brake transducers and primary DC current tracks.</li>
+                    </ul>
+
+                    <h3 class="modal-section-heading">Engineering Challenges &amp; Solutions</h3>
+                    <p class="modal-paragraph-text">
+                        <strong>1. Component Placement &amp; Densities:</strong> Spatial boundary guidelines imposed complex routing bottlenecks. Optimized trace paths using iterative layout evaluations to preserve safe high-voltage spatial boundaries.<br>
+                        <strong>2. Trace Routing &amp; Signal Integrity:</strong> Analog trace noise threatened rulebook compliance. Leveraged high-precision track shielding loops and verified signal cleanliness via extensive LTspice simulation profiles.
+                    </p>
+
+                    <h3 class="modal-section-heading">Topological Optimization Improvements</h3>
+                    <p class="modal-paragraph-text">
+                        Replaced obsolete digital logic arrays with an optimized Op-Amp comparator plus discrete MOSFET safety circuit path to maximize response stability.
+                    </p>
+                    <div class="metric-highlights-box">
+                        <div class="metric-stat-item"><span class="metric-value">35%</span><span class="metric-label">PCB Footprint Reduction</span></div>
+                        <div class="metric-stat-item"><span class="metric-value">18%</span><span class="metric-label">Response Delay Speedup</span></div>
+                    </div>
+
+                    <div class="modal-footer-cta" style="margin-top: 20px;">
+                        <a href="https://www.linkedin.com/posts/amule29_pcblayout-pcbdesign-altiumdesigner-activity-7239327830646419456-ShMq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEbqeA0BgyDCYYB-FxN12ZqLI_Dw8xxLpiQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary fluid-btn">View Design Post on LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 4: BATTERY MANAGEMENT SYSTEM MODAL -->
+        <div class="modal-window" id="modal-bms">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-view">
+                        <div class="project-placeholder-img graphic-4" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
+                            <i class="fa-solid fa-battery-three-quarters" style="font-size: 80px; color: #10b981;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-layer-group"></i> Multilayer Hardware Engineering</span>
+                    <h2 class="modal-case-title">Battery Management System (BMS Slave)</h2>
+                    <div class="modal-heading-divider"></div>
+                    
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Collaborated on the hardware design, manufacturing assembly, and electrical verification of an advanced 8-layer BMS slave printed circuit board configuration. The hardware stack handles dense multi-layer trace signals across a multi-board module configuration to check lithium cell voltages reliably.
+                    </p>
+                    
+                    <h3 class="modal-section-heading">Tech Stack &amp; Protocols</h3>
+                    <div class="project-badges" style="margin-bottom: 20px;">
+                        <span class="badge">PCB Design</span>
+                        <span class="badge">Altium Designer</span>
+                        <span class="badge">ISO-SPI Communication</span>
+                        <span class="badge">EV Battery Systems</span>
+                        <span class="badge">Signal Integrity</span>
+                    </div>
+
+                    <h3 class="modal-section-heading">Key Implementation Aspects</h3>
+                    <ul class="modal-specification-list">
+                        <li><strong>Isolated Communication:</strong> Implemented a high-efficiency ISO-SPI isolated networking standard to bridge data paths cleanly from Slave nodes to the primary BMS Master assembly.</li>
+                        <li><strong>Cell Protection Metrics:</strong> Embedded independent high-precision voltage sensing lines, thermal telemetry loops, and localized passive cell balancing control switches per node.</li>
+                        <li><strong>Cross-Functional Debugging:</strong> Coordinated hardware integration workflows with mechanical casing and software control teams while tracking operational hardware bugs down to isolated firmware registers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 5: ELECTRONIC CONTROL UNIT MODAL -->
+        <div class="modal-window" id="modal-ecu">
+            <button class="modal-close-btn" onclick="closeModalWindow()">&times;</button>
+            <div class="modal-body-grid">
+                <div class="modal-gallery-side">
+                    <div class="gallery-main-view">
+                        <div class="project-placeholder-img graphic-1" style="width: 100%; height: 300px; display: flex; align-items: center; justify-content: center; background: #1e293b; border-radius: 8px;">
+                            <i class="fa-solid fa-microchip" style="font-size: 80px; color: #a855f7;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-info-side">
+                    <span class="modal-meta-tag"><i class="fa-solid fa-terminal"></i> Embedded Firmware Architecture</span>
+                    <h2 class="modal-case-title">Electronic Control Unit for Electric Vehicle</h2>
+                    <div class="modal-heading-divider"></div>
+                    
+                    <h3 class="modal-section-heading">Project Overview</h3>
+                    <p class="modal-paragraph-text">
+                        Programmed and optimized the primary core embedded system firmware for an STM32-based automotive Electronic Control Unit (ECU). The implementation manages multiple high-speed vehicular peripheral buses, processing core control loop algorithms dynamically.
+                    </p>
+
+                    <h3 class="modal-section-heading">Technical Architecture Breakdown</h3>
+                    <ul class="modal-specification-list">
+                        <li><strong>Multi-Protocol Bus Integration:</strong> Developed low-level controller logic routines to execute concurrent communication over CAN, UART, SPI, and RS232 telemetry channels.</li>
+                        <li><strong>Sensor Telemetry Fusion:</strong> Structured data collection interfaces to parse realtime vectors from on-board IMUs, brake position sensors, steering encoders, and wheel-speed tracks.</li>
+                        <li><strong>Software-in-the-Loop Validation:</strong> Verified control algorithms and error isolation procedures using systematic Software-in-the-Loop (SIL) diagnostic configurations.</li>
+                        <li><strong>Fault Diagnostic Loops:</strong> Developed hardware-software error detection algorithms to support debugging, troubleshooting, and rapid isolation of vehicle electronics faults.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript Base Injections -->
+<script src="js/main.js" defer></script></body>
 </html>
